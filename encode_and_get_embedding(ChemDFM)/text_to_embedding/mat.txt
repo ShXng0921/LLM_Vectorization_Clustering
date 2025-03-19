@@ -1,0 +1,3 @@
+[
+"PMMA", "PC", "PET", "PACM12", "C28H44N2O23S·Na", "(C₂H₃Cl)ₙ", "Al23O27N5", "Na2O·CaO·6SiO2"
+]
