@@ -1,0 +1,9 @@
+formulaType: fix                 #  指定了生成结构的公式类型,'fix' 表示生成的结构是具有固定成分的结构。
+structureType: bulk              #  立体结构
+symbols: ['B']                   #  指定元素
+formula: [1]                     #  结构中每个元素对应的数量列表
+min_n_atoms: 12                  #  结构中每个单元格的最小原子数
+max_n_atoms: 12         
+spacegroup: [1-230]              # 结构的空间群。这里是范围从1到230的空间群。
+d_ratio: 0.5                     #  "d_ratio" 是控制结构中两个原子之间距离的参数，其值乘以原子半径的和表示两个原子之间的最小距离。
+volume_ratio: 8                  #  "volume_ratio" 是用于控制结构紧密程度的参数。它是通过计算单元格体积与所有原子球体积之和的比值得到的。

@@ -1,0 +1,11 @@
+ +-------------------------- Summary ----------------------------+
+            Band Character:    Indirect
+             Band Gap (eV):    2.0168
+    Eigenvalue of VBM (eV):    5.0361
+    Eigenvalue of CBM (eV):    7.0528
+         Fermi Energy (eV):    5.2759
+ Band Indexes of VBM & CBM:   40   41
+  Kpt Indexes of VBM & CBM:  101  121
+   Location of VBM (frac.):  0.000000  0.500000  0.500000
+   Location of CBM (frac.):  0.000000  0.000000  0.000000
+ +---------------------------------------------------------------+

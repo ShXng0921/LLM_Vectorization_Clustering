@@ -1,0 +1,35 @@
+ running    4 mpi-ranks, with    1 threads/rank, on    1 nodes
+ distrk:  each k-point on    4 cores,    1 groups
+ distr:  one band on    1 cores,    4 groups
+ OpenACC runtime initialized ...    4 GPUs detected
+ vasp.6.4.2 20Jul23 (build Jun 26 2024 13:15:30) complex                         
+ POSCAR found type information on POSCAR O W Bi
+ POSCAR found :  3 types and       9 ions
+ scaLAPACK will be used selectively (only on CPU)
+ LDA part: xc-table for Pade appr. of Perdew
+ found WAVECAR, reading the header
+  number of bands has changed, file:    48 present:    96
+  trying to continue reading WAVECAR, but it might fail
+ POSCAR, INCAR and KPOINTS ok, starting setup
+ FFT: planning ... GRIDC
+ FFT: planning ... GRID_SOFT
+ FFT: planning ... GRID
+ reading WAVECAR
+ random initialization beyond band            48
+ the WAVECAR file was read successfully
+ initial charge from wavefunction
+ entering main loop
+       N       E                     dE             d eps       ncg     rms          rms(c)
+DIA:   1    -0.657926295574E+02   -0.65793E+02    0.00000E+00     0   0.000E+00    0.253E-02
+DIA:   2    -0.657926275610E+02    0.19964E-05    0.00000E+00     0   0.000E+00    0.113E-02
+DIA:   3    -0.657926273972E+02    0.16381E-06    0.00000E+00     0   0.000E+00    0.623E-03
+DIA:   4    -0.657926272360E+02    0.16122E-06    0.00000E+00     0   0.000E+00    0.681E-04
+DIA:   5    -0.657926272396E+02   -0.36130E-08    0.00000E+00     0   0.000E+00
+   1 F= -.65792627E+02 E0= -.65792627E+02  d E =-.239725E-31
+ writing wavefunctions
+ optical routines
+ imaginary and real dielectric function
+ recalculating local potential from charge density
+ direction             1
+ direction             2
+ direction             3
