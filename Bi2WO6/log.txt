@@ -1,0 +1,2116 @@
+ 
+            ,'  , `.     MAGUS                                           
+        ,-+-,.' _ |      (v.1.6.2 RELEASE)                                    
+      ,-+-. ;   , ||   =========================   ,--,  ============            
+     ,--.'|'   |  ;|             ,----._,.       ,'_ /|   .--.--.    
+    |   |  ,', |  ':  ,--.--.   /   /  ' /  .--. |  | :  /  /    '   
+    |   | /  | |  || /       \ |   :     |,'_ /| :  . | |  :  /`./   
+    '   | :  | :  |,.--.  .-. ||   | .\  .|  ' | |  . . |  :  ;_     
+    ;   . |  ; |--'  \__\/: . ..   ; ';  ||  | ' |  | |  \  \    `.  
+    |   : |  | ,     ," .--.; |'   .   . |:  | : ;  ; |   `----.   \ 
+    |   : '  |/     /  /  ,.  | `---`-'| |'  :  `--'   \ /  /`--'  / 
+    ;   | |`-'     ;  :   .'   \.'__/\_: |:  ,      .-./'--'.     /  
+    |   ;/         |  ,     .-./|   :    : `--`----'      `--'---'   
+    '---'           `--`---'     \   \  /                            
+
+For any work that used MAGUS, please cite the following references:
+
+1. Junjie Wang, Hao Gao, Yu Han, Chi Ding, Shuning Pan, Yong Wang, Qiuhan Jia,
+   Hui-Tian Wang, Dingyu Xing, and Jian Sun, “MAGUS: machine learning and graph
+   theory assisted universal structure searcher”, Natl. Sci. Rev. 10, nwad128, 
+   (2023).
+
+2. Kang Xia, Hao Gao, Cong Liu, Jianan Yuan, Jian Sun, Hui-Tian Wang, Dingyu
+   Xing, “A novel superhard tungsten nitride predicted by machine-learning 
+   accelerated crystal structure search”, Sci. Bull. 63, 817 (2018).
+-------------------------------------------------------------------------------
+
+Note: NumExpr detected 40 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+NumExpr defaulting to 8 threads.
+============== Initialize ==============
+Main Calculator information:
+AdjointCalculator:
+Calculator 1: VaspCalculator
+-------------------
+job_prefix     : VASP1
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP1
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP1
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+Calculator 2: VaspCalculator
+-------------------
+job_prefix     : VASP2
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP2
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP2
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+Calculator 3: VaspCalculator
+-------------------
+job_prefix     : VASP3
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP3
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP3
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+Calculator 4: VaspCalculator
+-------------------
+job_prefix     : VASP4
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP4
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP4
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+
+Random Generator information:
+SPGGenerator
+-------------------
+formula_type   : fix
+symbols        : ['Bi', 'W', 'O']
+min_n_atoms    : 5
+max_n_atoms    : 9
+-------------------
+
+Offspring Creator information:
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population temp with 0 individual
+Population information:
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 0
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+construct Population best with 0 individual
+construct Population good with 0 individual
+construct Population keep with 0 individual
+============= Generation 1 =============
+construct Population init with 20 individual
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  random: 20
+save init1.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'The file "vasprun.xml" is incomplete, and no DFT data was available. This is likely due to an incomplete calculation.' happened on line 101
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 13 individual
+save raw1.traj
+check population temp, popsize:13
+check survival: 13
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:13
+del_duplicate survival: 13
+save gen1.traj
+set good population..
+construct goodPop
+construct Population temp with 13 individual
+construct Population temp with 13 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:13
+del_duplicate survival: 13
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 0
+Bi2O6W enthalpy: -7.299364554444444, fit: {'enthalpy': 7.299364554444444}, dominators: 1
+Bi2O6W enthalpy: -6.77486581, fit: {'enthalpy': 6.77486581}, dominators: 2
+Bi2O6W enthalpy: -6.751906435555556, fit: {'enthalpy': 6.751906435555556}, dominators: 3
+Bi2O6W enthalpy: -6.590289972222222, fit: {'enthalpy': 6.590289972222222}, dominators: 4
+Bi2O6W enthalpy: -5.897447166666667, fit: {'enthalpy': 5.897447166666667}, dominators: 5
+Bi2O6W enthalpy: -5.851094608888889, fit: {'enthalpy': 5.851094608888889}, dominators: 6
+Bi2O6W enthalpy: -5.726943413333334, fit: {'enthalpy': 5.726943413333334}, dominators: 7
+Bi2O6W enthalpy: -5.708510422222222, fit: {'enthalpy': 5.708510422222222}, dominators: 8
+Bi2O6W enthalpy: -5.569684122222222, fit: {'enthalpy': 5.569684122222222}, dominators: 9
+Bi2O6W enthalpy: -5.425202672222222, fit: {'enthalpy': 5.425202672222222}, dominators: 10
+Bi2O6W enthalpy: -5.263428242222222, fit: {'enthalpy': 5.263428242222222}, dominators: 11
+Bi2O6W enthalpy: -4.619584798888889, fit: {'enthalpy': 4.619584798888889}, dominators: 12
+save good.traj
+save good1.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 0
+Bi2O6W enthalpy: -6.77486581, fit: {'enthalpy': 6.77486581}, dominators: 2
+Bi2O6W enthalpy: -6.590289972222222, fit: {'enthalpy': 6.590289972222222}, dominators: 4
+save keep1.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}
+save best.traj
+============= Generation 2 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 13
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 3 to 3.2706067991772625
+construct Population temp with 13 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success SlipMutation in init1-1
+success SlipMutation in init1-1
+success LatticeMutation in init1-16
+success RippleMutation in init1-16
+success SlipMutation in init1-12
+success SlipMutation in init1-12
+success LatticeMutation in init1-1
+success SlipMutation in init1-12
+success RattleMutation in init1-12
+success SlipMutation in init1-16
+success LatticeMutation in init1-15
+success PermMutation in init1-12
+success RippleMutation in init1-2
+success CutAndSplicePairing between init1-12 and init1-12
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       1       |     1      |
+|     SlipMutation    |    16.67%    |       6       |     6      |
+|   LatticeMutation   |    16.67%    |       3       |     3      |
+|    RippleMutation   |    16.67%    |       2       |     2      |
+|    RattleMutation   |    16.67%    |       1       |     1      |
+|     PermMutation    |    16.67%    |       1       |     1      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+check survival: 14
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  PermMutation: 1
+  RattleMutation: 1
+  LatticeMutation: 3
+  SlipMutation: 6
+  random: 6
+  CutAndSplicePairing: 1
+  RippleMutation: 2
+save init2.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 17 individual
+save raw2.traj
+check population temp, popsize:17
+check survival: 17
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:17
+del_duplicate survival: 14
+save gen2.traj
+set good population..
+construct goodPop
+construct Population temp with 14 individual
+construct Population temp with 27 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:30
+del_duplicate survival: 27
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 0
+Bi2O6W enthalpy: -7.457673483333333, fit: {'enthalpy': 7.457673483333333}, dominators: 1
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 2
+Bi2O6W enthalpy: -7.424907996666666, fit: {'enthalpy': 7.424907996666666}, dominators: 3
+Bi2O6W enthalpy: -7.416688295555556, fit: {'enthalpy': 7.416688295555556}, dominators: 4
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 5
+Bi2O6W enthalpy: -7.411409601111111, fit: {'enthalpy': 7.411409601111111}, dominators: 6
+Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 7
+Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 8
+Bi2O6W enthalpy: -7.376433687777778, fit: {'enthalpy': 7.376433687777778}, dominators: 9
+Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 10
+Bi2O6W enthalpy: -7.3157906455555555, fit: {'enthalpy': 7.3157906455555555}, dominators: 11
+Bi2O6W enthalpy: -7.299364554444444, fit: {'enthalpy': 7.299364554444444}, dominators: 12
+Bi2O6W enthalpy: -7.196718264444446, fit: {'enthalpy': 7.196718264444446}, dominators: 13
+Bi2O6W enthalpy: -6.77486581, fit: {'enthalpy': 6.77486581}, dominators: 14
+Bi2O6W enthalpy: -6.751906435555556, fit: {'enthalpy': 6.751906435555556}, dominators: 15
+Bi2O6W enthalpy: -6.590289972222222, fit: {'enthalpy': 6.590289972222222}, dominators: 16
+Bi2O6W enthalpy: -6.295161076666667, fit: {'enthalpy': 6.295161076666667}, dominators: 17
+Bi2O6W enthalpy: -5.897447166666667, fit: {'enthalpy': 5.897447166666667}, dominators: 18
+Bi2O6W enthalpy: -5.851094608888889, fit: {'enthalpy': 5.851094608888889}, dominators: 19
+save good.traj
+save good2.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 2
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 0
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 5
+save keep2.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}
+save best.traj
+============= Generation 3 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 14
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 3.2706067991772625 to 3.1487595599274796
+construct Population temp with 14 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success RippleMutation in init2-9
+success RattleMutation in init2-0
+success LatticeMutation in init2-11
+success LatticeMutation in init2-8
+success RattleMutation in init2-8
+success RippleMutation in init2-0
+success RippleMutation in init2-8
+success CutAndSplicePairing between init2-0 and init2-0
+success PermMutation in init2-8
+success PermMutation in init2-0
+success SlipMutation in init2-0
+success RippleMutation in init2-8
+success LatticeMutation in init2-8
+success LatticeMutation in init2-8
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       1       |     1      |
+|     SlipMutation    |    16.67%    |       1       |     1      |
+|   LatticeMutation   |    16.67%    |       4       |     4      |
+|    RippleMutation   |    16.67%    |       4       |     4      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+check survival: 14
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  PermMutation: 2
+  RattleMutation: 2
+  LatticeMutation: 4
+  SlipMutation: 1
+  random: 6
+  CutAndSplicePairing: 1
+  RippleMutation: 4
+save init3.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 18 individual
+save raw3.traj
+check population temp, popsize:18
+check survival: 18
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:18
+del_duplicate survival: 13
+save gen3.traj
+set good population..
+construct goodPop
+construct Population temp with 13 individual
+construct Population temp with 33 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:36
+del_duplicate survival: 28
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 0
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 1
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 2
+Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 3
+Bi2O6W enthalpy: -7.437262908888889, fit: {'enthalpy': 7.437262908888889}, dominators: 4
+Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 5
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 6
+Bi2O6W enthalpy: -7.417544766666667, fit: {'enthalpy': 7.417544766666667}, dominators: 7
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 8
+Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 9
+Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 10
+Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 11
+Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 12
+Bi2O6W enthalpy: -7.376433687777778, fit: {'enthalpy': 7.376433687777778}, dominators: 13
+Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 14
+Bi2O6W enthalpy: -7.3157906455555555, fit: {'enthalpy': 7.3157906455555555}, dominators: 15
+Bi2O6W enthalpy: -7.299364554444444, fit: {'enthalpy': 7.299364554444444}, dominators: 16
+Bi2O6W enthalpy: -7.248946392222223, fit: {'enthalpy': 7.248946392222223}, dominators: 17
+Bi2O6W enthalpy: -7.196718264444446, fit: {'enthalpy': 7.196718264444446}, dominators: 18
+Bi2O6W enthalpy: -6.915587085555555, fit: {'enthalpy': 6.915587085555555}, dominators: 19
+save good.traj
+save good3.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 1
+Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 0
+Bi2O6W enthalpy: -7.376433687777778, fit: {'enthalpy': 7.376433687777778}, dominators: 13
+save keep3.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}
+save best.traj
+============= Generation 4 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 13
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 3.1487595599274796 to 2.9365990263919954
+construct Population temp with 13 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success RippleMutation in init3-0
+success CutAndSplicePairing between init3-0 and init3-0
+success SlipMutation in init3-18
+success CutAndSplicePairing between init3-17 and init2-16
+success CutAndSplicePairing between init3-0 and init3-0
+success LatticeMutation in init3-10
+success LatticeMutation in init3-0
+success CutAndSplicePairing between init3-0 and init3-6
+success RattleMutation in init3-0
+success LatticeMutation in init3-0
+success LatticeMutation in init3-2
+success SlipMutation in init3-2
+success PermMutation in init3-0
+success SlipMutation in init3-7
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       4       |     4      |
+|     SlipMutation    |    16.67%    |       3       |     3      |
+|   LatticeMutation   |    16.67%    |       4       |     4      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       1       |     1      |
+|     PermMutation    |    16.67%    |       1       |     1      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+check survival: 14
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  PermMutation: 1
+  RattleMutation: 1
+  LatticeMutation: 4
+  SlipMutation: 3
+  random: 6
+  CutAndSplicePairing: 4
+  RippleMutation: 1
+save init4.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 12 individual
+save raw4.traj
+check population temp, popsize:12
+check survival: 12
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:12
+del_duplicate survival: 12
+save gen4.traj
+set good population..
+construct goodPop
+construct Population temp with 12 individual
+construct Population temp with 32 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:35
+del_duplicate survival: 29
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 0
+Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 1
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 2
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 3
+Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 4
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 5
+Bi2O6W enthalpy: -7.437262908888889, fit: {'enthalpy': 7.437262908888889}, dominators: 6
+Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 7
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 8
+Bi2O6W enthalpy: -7.417544766666667, fit: {'enthalpy': 7.417544766666667}, dominators: 9
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 10
+Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 11
+Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 12
+Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 13
+Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 14
+Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 15
+Bi2O6W enthalpy: -7.343195531111111, fit: {'enthalpy': 7.343195531111111}, dominators: 16
+Bi2O6W enthalpy: -7.342937446666667, fit: {'enthalpy': 7.342937446666667}, dominators: 17
+Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 18
+Bi2O6W enthalpy: -7.3157906455555555, fit: {'enthalpy': 7.3157906455555555}, dominators: 19
+save good.traj
+save good4.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 0
+Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 1
+Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 15
+save keep4.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}
+save best.traj
+============= Generation 5 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 12
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 2.9365990263919954 to 2.8870420384014928
+construct Population temp with 12 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success PermMutation in init4-8
+success CutAndSplicePairing between init4-8 and init4-8
+success SlipMutation in init4-0
+success LatticeMutation in init4-0
+success SlipMutation in init3-0
+success RattleMutation in init4-8
+success PermMutation in init4-5
+success RippleMutation in init4-12
+success SlipMutation in init3-0
+success LatticeMutation in init4-8
+success SlipMutation in init4-8
+success CutAndSplicePairing between init4-8 and init4-8
+success CutAndSplicePairing between init4-5 and init4-8
+success CutAndSplicePairing between init4-10 and init4-10
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       4       |     4      |
+|     SlipMutation    |    16.67%    |       4       |     4      |
+|   LatticeMutation   |    16.67%    |       2       |     2      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       1       |     1      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+check survival: 14
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+Fail in check_cell, origin = random
+check survival: 19
+Generate new initial population with 19 individuals:
+  PermMutation: 2
+  RattleMutation: 1
+  LatticeMutation: 2
+  SlipMutation: 4
+  random: 5
+  CutAndSplicePairing: 4
+  RippleMutation: 1
+save init5.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 14 individual
+save raw5.traj
+check population temp, popsize:14
+check survival: 14
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:14
+del_duplicate survival: 12
+save gen5.traj
+set good population..
+construct goodPop
+construct Population temp with 12 individual
+construct Population temp with 32 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:35
+del_duplicate survival: 27
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+Bi2O6W enthalpy: -7.523473796666668, fit: {'enthalpy': 7.523473796666668}, dominators: 2
+Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 6
+Bi2O6W enthalpy: -7.460073798888889, fit: {'enthalpy': 7.460073798888889}, dominators: 7
+Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 9
+Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 10
+Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 11
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 12
+Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 13
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 14
+Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 15
+Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 16
+Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 17
+Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 18
+Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 19
+save good.traj
+save good5.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.523473796666668, fit: {'enthalpy': 7.523473796666668}, dominators: 2
+Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 19
+save keep5.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+save best.traj
+============= Generation 6 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 12
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 2.8870420384014928 to 2.8697422546800997
+construct Population temp with 12 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success PermMutation in init5-4
+success PermMutation in init5-9
+success PermMutation in init5-9
+success SlipMutation in init5-9
+success SlipMutation in init5-9
+success SlipMutation in init5-9
+success PermMutation in init5-13
+success PermMutation in init5-9
+success SlipMutation in init5-9
+success CutAndSplicePairing between init5-9 and init5-11
+success RattleMutation in init5-4
+success LatticeMutation in init5-9
+success RattleMutation in init5-4
+success LatticeMutation in init5-4
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       1       |     1      |
+|     SlipMutation    |    16.67%    |       4       |     4      |
+|   LatticeMutation   |    16.67%    |       2       |     2      |
+|    RippleMutation   |    16.67%    |       0       |     0      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       5       |     5      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+Fail in check_cell, origin = PermMutation
+Fail in check_cell, origin = PermMutation
+Fail in check_cell, origin = SlipMutation
+Fail in check_cell, origin = SlipMutation
+Fail in check_cell, origin = SlipMutation
+Fail in check_cell, origin = PermMutation
+Fail in check_cell, origin = SlipMutation
+Fail in check_cell, origin = LatticeMutation
+check survival: 6
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+Fail in check_cell, origin = random
+Fail in check_cell, origin = random
+check survival: 18
+Generate new initial population with 18 individuals:
+  PermMutation: 2
+  RattleMutation: 2
+  LatticeMutation: 1
+  random: 12
+  CutAndSplicePairing: 1
+save init6.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 15 individual
+save raw6.traj
+check population temp, popsize:15
+check survival: 15
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:15
+del_duplicate survival: 14
+save gen6.traj
+set good population..
+construct goodPop
+construct Population temp with 14 individual
+construct Population temp with 34 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:37
+del_duplicate survival: 31
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+Bi2O6W enthalpy: -7.523557704444444, fit: {'enthalpy': 7.523557704444444}, dominators: 2
+Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 6
+Bi2O6W enthalpy: -7.460073798888889, fit: {'enthalpy': 7.460073798888889}, dominators: 7
+Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 9
+Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 10
+Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 11
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 12
+Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 13
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 14
+Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 15
+Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 16
+Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 17
+Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 18
+Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 19
+save good.traj
+save good6.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 9
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.523557704444444, fit: {'enthalpy': 7.523557704444444}, dominators: 2
+save keep6.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+save best.traj
+============= Generation 7 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 14
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 2.8697422546800997 to 3.0791766103400544
+construct Population temp with 14 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success CutAndSplicePairing between init5-9 and init6-15
+success SlipMutation in init5-9
+success LatticeMutation in init6-13
+success SlipMutation in init6-13
+success RippleMutation in init6-18
+success CutAndSplicePairing between init6-9 and init6-6
+success LatticeMutation in init4-0
+success CutAndSplicePairing between init6-9 and init5-9
+success RippleMutation in init6-15
+success CutAndSplicePairing between init6-6 and init5-9
+success SlipMutation in init6-9
+success CutAndSplicePairing between init4-0 and init6-13
+success LatticeMutation in init6-13
+success RippleMutation in init6-0
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       5       |     5      |
+|     SlipMutation    |    16.67%    |       3       |     3      |
+|   LatticeMutation   |    16.67%    |       3       |     3      |
+|    RippleMutation   |    16.67%    |       3       |     3      |
+|    RattleMutation   |    16.67%    |       0       |     0      |
+|     PermMutation    |    16.67%    |       0       |     0      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+Fail in check_cell, origin = SlipMutation
+check survival: 13
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  LatticeMutation: 3
+  SlipMutation: 2
+  random: 7
+  CutAndSplicePairing: 5
+  RippleMutation: 3
+save init7.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+Error 'The file "vasprun.xml" is incomplete, and no DFT data was available. This is likely due to an incomplete calculation.' happened on line 101
+VASP fail
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 15 individual
+save raw7.traj
+check population temp, popsize:15
+check survival: 15
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:15
+del_duplicate survival: 12
+save gen7.traj
+set good population..
+construct goodPop
+construct Population temp with 12 individual
+construct Population temp with 32 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:35
+del_duplicate survival: 28
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 6
+Bi2O6W enthalpy: -7.460073798888889, fit: {'enthalpy': 7.460073798888889}, dominators: 7
+Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 10
+Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 11
+Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 12
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 13
+Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 14
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 15
+Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 16
+Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 17
+Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 18
+Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 19
+save good.traj
+save good7.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+save keep7.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+save best.traj
+============= Generation 8 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 12
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 3.0791766103400544 to 2.986516174669715
+construct Population temp with 12 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success RippleMutation in init5-9
+success CutAndSplicePairing between init7-9 and init5-9
+success RattleMutation in init5-9
+success PermMutation in init7-5
+success CutAndSplicePairing between init5-9 and init7-0
+success SlipMutation in init5-9
+success RattleMutation in init5-9
+success CutAndSplicePairing between init7-15 and init7-2
+success RippleMutation in init7-2
+success PermMutation in init5-9
+success CutAndSplicePairing between init5-9 and init7-9
+success CutAndSplicePairing between init7-5 and init7-3
+success LatticeMutation in init7-3
+success SlipMutation in init5-9
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       5       |     5      |
+|     SlipMutation    |    16.67%    |       2       |     2      |
+|   LatticeMutation   |    16.67%    |       1       |     1      |
+|    RippleMutation   |    16.67%    |       2       |     2      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+Fail in check_cell, origin = RippleMutation
+Fail in check_cell, origin = RattleMutation
+Fail in check_cell, origin = SlipMutation
+Fail in check_cell, origin = RattleMutation
+Fail in check_cell, origin = PermMutation
+Fail in check_cell, origin = SlipMutation
+check survival: 8
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  PermMutation: 1
+  LatticeMutation: 1
+  random: 12
+  CutAndSplicePairing: 5
+  RippleMutation: 1
+save init8.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 14 individual
+save raw8.traj
+check population temp, popsize:14
+check survival: 14
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:14
+del_duplicate survival: 14
+save gen8.traj
+set good population..
+construct goodPop
+construct Population temp with 14 individual
+construct Population temp with 34 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:37
+del_duplicate survival: 29
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+Bi2O6W enthalpy: -7.4680113355555555, fit: {'enthalpy': 7.4680113355555555}, dominators: 6
+Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 7
+Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 10
+Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 11
+Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 12
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 13
+Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 14
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 15
+Bi2O6W enthalpy: -7.4062528711111115, fit: {'enthalpy': 7.4062528711111115}, dominators: 16
+Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 17
+Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 18
+Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 19
+save good.traj
+save good8.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+save keep8.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+save best.traj
+============= Generation 9 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 14
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 2.986516174669715 to 2.9719253604605496
+construct Population temp with 14 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success PermMutation in init8-12
+success RippleMutation in init5-9
+success PermMutation in init5-9
+success CutAndSplicePairing between init8-8 and init7-5
+success SlipMutation in init5-9
+success SlipMutation in init5-9
+success LatticeMutation in init7-2
+success CutAndSplicePairing between init5-9 and init8-1
+success RattleMutation in init8-11
+success RattleMutation in init8-13
+success SlipMutation in init7-2
+success CutAndSplicePairing between init5-9 and init8-1
+success CutAndSplicePairing between init8-11 and init8-14
+success PermMutation in init7-2
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       4       |     4      |
+|     SlipMutation    |    16.67%    |       3       |     3      |
+|   LatticeMutation   |    16.67%    |       1       |     1      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       3       |     3      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+Fail in check_cell, origin = RippleMutation
+Fail in check_cell, origin = PermMutation
+Fail in check_cell, origin = SlipMutation
+Fail in check_cell, origin = SlipMutation
+check survival: 10
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  PermMutation: 2
+  RattleMutation: 2
+  LatticeMutation: 1
+  SlipMutation: 1
+  random: 10
+  CutAndSplicePairing: 4
+save init9.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 16 individual
+save raw9.traj
+check population temp, popsize:16
+check survival: 16
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:16
+del_duplicate survival: 16
+save gen9.traj
+set good population..
+construct goodPop
+construct Population temp with 16 individual
+construct Population temp with 36 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:39
+del_duplicate survival: 31
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+Bi2O6W enthalpy: -7.4680113355555555, fit: {'enthalpy': 7.4680113355555555}, dominators: 6
+Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 7
+Bi2O6W enthalpy: -7.460469574444444, fit: {'enthalpy': 7.460469574444444}, dominators: 8
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 10
+Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 11
+Bi2O6W enthalpy: -7.435868005555556, fit: {'enthalpy': 7.435868005555556}, dominators: 12
+Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 13
+Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 14
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 15
+Bi2O6W enthalpy: -7.408148727777777, fit: {'enthalpy': 7.408148727777777}, dominators: 16
+Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 17
+Bi2O6W enthalpy: -7.392872926666666, fit: {'enthalpy': 7.392872926666666}, dominators: 18
+Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 19
+save good.traj
+save good9.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+save keep9.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+save best.traj
+============ Generation 10 =============
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 16
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+change volRatio from 2.9719253604605496 to 2.9122249024443994
+construct Population temp with 16 individual
+calculating dominators...
+calculating fitness...
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+construct Population init with 0 individual
+success RattleMutation in init9-13
+success RippleMutation in init9-10
+success LatticeMutation in init5-9
+success LatticeMutation in init7-2
+success RattleMutation in init7-2
+success RattleMutation in init9-13
+success LatticeMutation in init9-13
+success CutAndSplicePairing between init9-9 and init9-8
+success CutAndSplicePairing between init7-2 and init7-5
+success PermMutation in init9-0
+success PermMutation in init7-2
+success RattleMutation in init9-15
+success LatticeMutation in init9-10
+success LatticeMutation in init9-10
+OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       2       |     2      |
+|     SlipMutation    |    16.67%    |       0       |     0      |
+|   LatticeMutation   |    16.67%    |       5       |     5      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       4       |     4      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+check population init, popsize:14
+Fail in check_cell, origin = LatticeMutation
+check survival: 13
+Reading Seeds ...
+construct Population seed with 0 individual
+check population init, popsize:20
+check survival: 20
+Generate new initial population with 20 individuals:
+  PermMutation: 2
+  RattleMutation: 4
+  LatticeMutation: 4
+  random: 7
+  CutAndSplicePairing: 2
+  RippleMutation: 1
+save init10.traj
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'list index out of range' happened on line 108
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+Error 'The file "vasprun.xml" is incomplete, and no DFT data was available. This is likely due to an incomplete calculation.' happened on line 101
+VASP fail
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+VASP finish
+construct Population temp with 15 individual
+save raw10.traj
+check population temp, popsize:15
+check survival: 15
+find spg...
+delete duplicate structures...
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:15
+del_duplicate survival: 13
+save gen10.traj
+set good population..
+construct goodPop
+construct Population temp with 13 individual
+construct Population temp with 33 individual
+calculating dominators...
+calculating fitness...
+del_duplicate temp begin, popsize:36
+del_duplicate survival: 30
+calculating dominators...
+calculating fitness...
+calculating dominators...
+calculating fitness...
+good ind:
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+Bi2O6W enthalpy: -7.523612047777778, fit: {'enthalpy': 7.523612047777778}, dominators: 2
+Bi2O6W enthalpy: -7.523137051111111, fit: {'enthalpy': 7.523137051111111}, dominators: 3
+Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+Bi2O6W enthalpy: -7.4680113355555555, fit: {'enthalpy': 7.4680113355555555}, dominators: 6
+Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 7
+Bi2O6W enthalpy: -7.462668281111111, fit: {'enthalpy': 7.462668281111111}, dominators: 8
+Bi2O6W enthalpy: -7.460469574444444, fit: {'enthalpy': 7.460469574444444}, dominators: 9
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 10
+Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 11
+Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 12
+Bi2O6W enthalpy: -7.435868005555556, fit: {'enthalpy': 7.435868005555556}, dominators: 13
+Bi2O6W enthalpy: -7.4348285177777775, fit: {'enthalpy': 7.4348285177777775}, dominators: 14
+Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 15
+Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 16
+Bi2O6W enthalpy: -7.408148727777777, fit: {'enthalpy': 7.408148727777777}, dominators: 17
+Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 18
+Bi2O6W enthalpy: -7.392872926666666, fit: {'enthalpy': 7.392872926666666}, dominators: 19
+save good.traj
+save good10.traj
+set keep population..
+construct keepPop
+construct Population keep with 3 individual
+keep ind:
+Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 10
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+Bi2O6W enthalpy: -7.523612047777778, fit: {'enthalpy': 7.523612047777778}, dominators: 2
+save keep10.traj
+best ind:
+calculating dominators...
+calculating fitness...
+Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+save best.traj

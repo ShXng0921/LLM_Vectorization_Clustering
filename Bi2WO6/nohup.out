@@ -1,0 +1,3157 @@
+22:32:16    
+            ,'  , `.     MAGUS                                           
+        ,-+-,.' _ |      (v.1.6.2 RELEASE)                                    
+      ,-+-. ;   , ||   =========================   ,--,  ============            
+     ,--.'|'   |  ;|             ,----._,.       ,'_ /|   .--.--.    
+    |   |  ,', |  ':  ,--.--.   /   /  ' /  .--. |  | :  /  /    '   
+    |   | /  | |  || /       \ |   :     |,'_ /| :  . | |  :  /`./   
+    '   | :  | :  |,.--.  .-. ||   | .\  .|  ' | |  . . |  :  ;_     
+    ;   . |  ; |--'  \__\/: . ..   ; ';  ||  | ' |  | |  \  \    `.  
+    |   : |  | ,     ," .--.; |'   .   . |:  | : ;  ; |   `----.   \ 
+    |   : '  |/     /  /  ,.  | `---`-'| |'  :  `--'   \ /  /`--'  / 
+    ;   | |`-'     ;  :   .'   \.'__/\_: |:  ,      .-./'--'.     /  
+    |   ;/         |  ,     .-./|   :    : `--`----'      `--'---'   
+    '---'           `--`---'     \   \  /                            
+
+For any work that used MAGUS, please cite the following references:
+
+1. Junjie Wang, Hao Gao, Yu Han, Chi Ding, Shuning Pan, Yong Wang, Qiuhan Jia,
+   Hui-Tian Wang, Dingyu Xing, and Jian Sun, “MAGUS: machine learning and graph
+   theory assisted universal structure searcher”, Natl. Sci. Rev. 10, nwad128, 
+   (2023).
+
+2. Kang Xia, Hao Gao, Cong Liu, Jianan Yuan, Jian Sun, Hui-Tian Wang, Dingyu
+   Xing, “A novel superhard tungsten nitride predicted by machine-learning 
+   accelerated crystal structure search”, Sci. Bull. 63, 817 (2018).
+-------------------------------------------------------------------------------
+
+22:32:18   Note: NumExpr detected 40 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+22:32:18   NumExpr defaulting to 8 threads.
+22:32:18   ============== Initialize ==============
+which: no mlp in (/opt/intel/oneapi/mpi/2021.12/bin:/opt/intel/oneapi/mkl/2024.1/bin/:/opt/intel/oneapi/dpcpp-ct/2024.1/bin:/opt/intel/oneapi/dev-utilities/2024.1/bin:/opt/intel/oneapi/debugger/2024.1/opt/debugger/bin:/opt/intel/oneapi/compiler/2024.1/opt/oclfpga/bin:/opt/intel/oneapi/compiler/2024.1/bin:/opt/software/llama/llama.cpp/build/bin:/root/anaconda3/bin:/root/anaconda3/condabin:/opt/software/vaspkit.1.3.5/bin:/opt/vaspkit.1.3.5/bin:/opt/software/vasp/vasp.5.4.1/bin:/opt/software/qe-6.3/bin:/opt/software/xcrysden-1.5.53:/opt/software/scilab-5.3.3/bin:/opt/software/maui-3.3.1/sbin:/opt/software/maui-3.3.1/bin:/opt/software/torque-6.1.0/sbin:/opt/software/torque-6.1.0/bin:/opt/software/mpich2-intel/sbin:/opt/software/mpich2-intel/bin:/opt/software/torque-6.1.0/bin:/opt/software/torque-6.1.0/sbin:/usr/lib64/qt-3.3/bin:/root/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/customer/anaconda3/bin:/opt/rh/devtoolset-11/root/usr/bin:/opt/software/vasp/vasp.6.4.2/bin:/opt/software/magus/bin:/opt/software/Hefei-NAMD-master/src/namd:/root/bin)
+which: no mlp in (/opt/intel/oneapi/mpi/2021.12/bin:/opt/intel/oneapi/mkl/2024.1/bin/:/opt/intel/oneapi/dpcpp-ct/2024.1/bin:/opt/intel/oneapi/dev-utilities/2024.1/bin:/opt/intel/oneapi/debugger/2024.1/opt/debugger/bin:/opt/intel/oneapi/compiler/2024.1/opt/oclfpga/bin:/opt/intel/oneapi/compiler/2024.1/bin:/opt/software/llama/llama.cpp/build/bin:/root/anaconda3/bin:/root/anaconda3/condabin:/opt/software/vaspkit.1.3.5/bin:/opt/vaspkit.1.3.5/bin:/opt/software/vasp/vasp.5.4.1/bin:/opt/software/qe-6.3/bin:/opt/software/xcrysden-1.5.53:/opt/software/scilab-5.3.3/bin:/opt/software/maui-3.3.1/sbin:/opt/software/maui-3.3.1/bin:/opt/software/torque-6.1.0/sbin:/opt/software/torque-6.1.0/bin:/opt/software/mpich2-intel/sbin:/opt/software/mpich2-intel/bin:/opt/software/torque-6.1.0/bin:/opt/software/torque-6.1.0/sbin:/usr/lib64/qt-3.3/bin:/root/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/customer/anaconda3/bin:/opt/rh/devtoolset-11/root/usr/bin:/opt/software/vasp/vasp.6.4.2/bin:/opt/software/magus/bin:/opt/software/Hefei-NAMD-master/src/namd:/root/bin)
+which: no mlp in (/opt/intel/oneapi/mpi/2021.12/bin:/opt/intel/oneapi/mkl/2024.1/bin/:/opt/intel/oneapi/dpcpp-ct/2024.1/bin:/opt/intel/oneapi/dev-utilities/2024.1/bin:/opt/intel/oneapi/debugger/2024.1/opt/debugger/bin:/opt/intel/oneapi/compiler/2024.1/opt/oclfpga/bin:/opt/intel/oneapi/compiler/2024.1/bin:/opt/software/llama/llama.cpp/build/bin:/root/anaconda3/bin:/root/anaconda3/condabin:/opt/software/vaspkit.1.3.5/bin:/opt/vaspkit.1.3.5/bin:/opt/software/vasp/vasp.5.4.1/bin:/opt/software/qe-6.3/bin:/opt/software/xcrysden-1.5.53:/opt/software/scilab-5.3.3/bin:/opt/software/maui-3.3.1/sbin:/opt/software/maui-3.3.1/bin:/opt/software/torque-6.1.0/sbin:/opt/software/torque-6.1.0/bin:/opt/software/mpich2-intel/sbin:/opt/software/mpich2-intel/bin:/opt/software/torque-6.1.0/bin:/opt/software/torque-6.1.0/sbin:/usr/lib64/qt-3.3/bin:/root/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/customer/anaconda3/bin:/opt/rh/devtoolset-11/root/usr/bin:/opt/software/vasp/vasp.6.4.2/bin:/opt/software/magus/bin:/opt/software/Hefei-NAMD-master/src/namd:/root/bin)
+which: no mlp in (/opt/intel/oneapi/mpi/2021.12/bin:/opt/intel/oneapi/mkl/2024.1/bin/:/opt/intel/oneapi/dpcpp-ct/2024.1/bin:/opt/intel/oneapi/dev-utilities/2024.1/bin:/opt/intel/oneapi/debugger/2024.1/opt/debugger/bin:/opt/intel/oneapi/compiler/2024.1/opt/oclfpga/bin:/opt/intel/oneapi/compiler/2024.1/bin:/opt/software/llama/llama.cpp/build/bin:/root/anaconda3/bin:/root/anaconda3/condabin:/opt/software/vaspkit.1.3.5/bin:/opt/vaspkit.1.3.5/bin:/opt/software/vasp/vasp.5.4.1/bin:/opt/software/qe-6.3/bin:/opt/software/xcrysden-1.5.53:/opt/software/scilab-5.3.3/bin:/opt/software/maui-3.3.1/sbin:/opt/software/maui-3.3.1/bin:/opt/software/torque-6.1.0/sbin:/opt/software/torque-6.1.0/bin:/opt/software/mpich2-intel/sbin:/opt/software/mpich2-intel/bin:/opt/software/torque-6.1.0/bin:/opt/software/torque-6.1.0/sbin:/usr/lib64/qt-3.3/bin:/root/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/customer/anaconda3/bin:/opt/rh/devtoolset-11/root/usr/bin:/opt/software/vasp/vasp.6.4.2/bin:/opt/software/magus/bin:/opt/software/Hefei-NAMD-master/src/namd:/root/bin)
+which: no mlp in (/opt/intel/oneapi/mpi/2021.12/bin:/opt/intel/oneapi/mkl/2024.1/bin/:/opt/intel/oneapi/dpcpp-ct/2024.1/bin:/opt/intel/oneapi/dev-utilities/2024.1/bin:/opt/intel/oneapi/debugger/2024.1/opt/debugger/bin:/opt/intel/oneapi/compiler/2024.1/opt/oclfpga/bin:/opt/intel/oneapi/compiler/2024.1/bin:/opt/software/llama/llama.cpp/build/bin:/root/anaconda3/bin:/root/anaconda3/condabin:/opt/software/vaspkit.1.3.5/bin:/opt/vaspkit.1.3.5/bin:/opt/software/vasp/vasp.5.4.1/bin:/opt/software/qe-6.3/bin:/opt/software/xcrysden-1.5.53:/opt/software/scilab-5.3.3/bin:/opt/software/maui-3.3.1/sbin:/opt/software/maui-3.3.1/bin:/opt/software/torque-6.1.0/sbin:/opt/software/torque-6.1.0/bin:/opt/software/mpich2-intel/sbin:/opt/software/mpich2-intel/bin:/opt/software/torque-6.1.0/bin:/opt/software/torque-6.1.0/sbin:/usr/lib64/qt-3.3/bin:/root/perl5/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/home/customer/anaconda3/bin:/opt/rh/devtoolset-11/root/usr/bin:/opt/software/vasp/vasp.6.4.2/bin:/opt/software/magus/bin:/opt/software/Hefei-NAMD-master/src/namd:/root/bin)
+22:32:18   Main Calculator information:
+AdjointCalculator:
+Calculator 1: VaspCalculator
+-------------------
+job_prefix     : VASP1
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP1
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP1
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+Calculator 2: VaspCalculator
+-------------------
+job_prefix     : VASP2
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP2
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP2
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+Calculator 3: VaspCalculator
+-------------------
+job_prefix     : VASP3
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP3
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP3
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+Calculator 4: VaspCalculator
+-------------------
+job_prefix     : VASP4
+pressure       : 0
+input_dir      : /root/ZJC/example/GdScO3/inputFold/VASP4
+calc_dir       : /root/ZJC/example/GdScO3/calcFold/VASP4
+mode           : serial
+vasp_setup     : pp_setup:
+                   Bi: ''
+                   O: _s
+                   W: _sv_GW
+                 pressure: 0
+                 restart: false
+                 xc: PBE
+-------------------
+
+22:32:18   Random Generator information:
+SPGGenerator
+-------------------
+formula_type   : fix
+symbols        : ['Bi', 'W', 'O']
+min_n_atoms    : 5
+max_n_atoms    : 9
+-------------------
+
+22:32:18   Offspring Creator information:
+GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+22:32:18   construct Population temp with 0 individual
+22:32:18   Population information:
+FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 0
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+22:32:18   construct Population best with 0 individual
+22:32:18   construct Population good with 0 individual
+22:32:18   construct Population keep with 0 individual
+22:32:18   ============= Generation 1 =============
+22:32:18   construct Population init with 20 individual
+22:32:18   Reading Seeds ...
+22:32:18   construct Population seed with 0 individual
+22:32:18   check population init, popsize:20
+22:32:18   check survival: 20
+22:32:18   Generate new initial population with 20 individuals:
+22:32:18     random: 20
+22:32:18   save init1.traj
+22:33:48   VASP finish
+22:34:35   VASP finish
+22:35:42   VASP finish
+22:36:24   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+/opt/software/magus/lib/python3.11/site-packages/ase/io/vasp_parsers/vasp_outcar_parsers.py:291: UserWarning: Found badly formatted stress line. Setting stress to None.
+  warn('Found badly formatted stress line. Setting stress to None.')
+22:36:39   Error 'list index out of range' happened on line 108
+22:36:39   VASP fail
+22:37:19   VASP finish
+22:38:44   VASP finish
+22:40:01   VASP finish
+22:40:58   VASP finish
+22:41:23   VASP finish
+22:42:31   VASP finish
+22:43:03   VASP finish
+22:43:53   VASP finish
+22:45:12   VASP finish
+22:45:28   VASP finish
+22:47:07   VASP finish
+22:47:32   VASP finish
+22:47:47   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+22:48:18   Error 'list index out of range' happened on line 108
+22:48:18   VASP fail
+22:48:26   VASP finish
+22:48:59   VASP finish
+22:50:42   VASP finish
+22:51:57   VASP finish
+22:52:56   VASP finish
+22:53:26   VASP finish
+22:53:40   VASP finish
+22:54:00   VASP finish
+22:54:46   VASP finish
+22:55:24   VASP finish
+22:55:52   VASP finish
+22:56:01   VASP finish
+22:56:24   VASP finish
+22:56:38   VASP finish
+22:57:14   VASP finish
+22:58:16   VASP finish
+22:58:37   VASP finish
+22:59:02   VASP finish
+22:59:08   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+23:00:32   Error 'list index out of range' happened on line 108
+23:00:32   VASP fail
+23:03:35   VASP finish
+23:16:55   VASP finish
+23:24:43   VASP finish
+23:29:21   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+23:29:41   Error 'The file "vasprun.xml" is incomplete, and no DFT data was available. This is likely due to an incomplete calculation.' happened on line 101
+23:29:41   VASP fail
+23:33:34   VASP finish
+23:34:58   VASP finish
+23:36:26   VASP finish
+23:43:22   VASP finish
+23:47:17   VASP finish
+23:50:22   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+23:52:43   Error 'list index out of range' happened on line 108
+23:52:43   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+23:55:16   Error 'list index out of range' happened on line 108
+23:55:16   VASP fail
+00:00:42   VASP finish
+00:04:10   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+00:05:29   Error 'list index out of range' happened on line 108
+00:05:29   VASP fail
+00:06:57   VASP finish
+00:07:47   VASP finish
+00:10:22   VASP finish
+00:11:27   VASP finish
+00:12:00   VASP finish
+00:12:36   VASP finish
+00:13:02   VASP finish
+00:13:52   VASP finish
+00:17:05   VASP finish
+00:17:27   VASP finish
+00:18:04   VASP finish
+00:19:19   VASP finish
+00:19:53   VASP finish
+00:20:26   VASP finish
+00:20:26   construct Population temp with 13 individual
+00:20:26   save raw1.traj
+00:20:26   check population temp, popsize:13
+00:20:26   check survival: 13
+00:20:26   find spg...
+00:20:26   delete duplicate structures...
+00:20:26   calculating dominators...
+00:20:26   calculating fitness...
+00:20:26   del_duplicate temp begin, popsize:13
+00:20:26   del_duplicate survival: 13
+00:20:26   save gen1.traj
+00:20:26   set good population..
+00:20:26   construct goodPop
+00:20:26   construct Population temp with 13 individual
+00:20:26   construct Population temp with 13 individual
+00:20:26   calculating dominators...
+00:20:26   calculating fitness...
+00:20:26   del_duplicate temp begin, popsize:13
+00:20:26   del_duplicate survival: 13
+00:20:26   calculating dominators...
+00:20:26   calculating fitness...
+00:20:26   calculating dominators...
+00:20:26   calculating fitness...
+00:20:26   good ind:
+00:20:26   Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 0
+00:20:26   Bi2O6W enthalpy: -7.299364554444444, fit: {'enthalpy': 7.299364554444444}, dominators: 1
+00:20:26   Bi2O6W enthalpy: -6.77486581, fit: {'enthalpy': 6.77486581}, dominators: 2
+00:20:26   Bi2O6W enthalpy: -6.751906435555556, fit: {'enthalpy': 6.751906435555556}, dominators: 3
+00:20:26   Bi2O6W enthalpy: -6.590289972222222, fit: {'enthalpy': 6.590289972222222}, dominators: 4
+00:20:26   Bi2O6W enthalpy: -5.897447166666667, fit: {'enthalpy': 5.897447166666667}, dominators: 5
+00:20:26   Bi2O6W enthalpy: -5.851094608888889, fit: {'enthalpy': 5.851094608888889}, dominators: 6
+00:20:26   Bi2O6W enthalpy: -5.726943413333334, fit: {'enthalpy': 5.726943413333334}, dominators: 7
+00:20:26   Bi2O6W enthalpy: -5.708510422222222, fit: {'enthalpy': 5.708510422222222}, dominators: 8
+00:20:26   Bi2O6W enthalpy: -5.569684122222222, fit: {'enthalpy': 5.569684122222222}, dominators: 9
+00:20:26   Bi2O6W enthalpy: -5.425202672222222, fit: {'enthalpy': 5.425202672222222}, dominators: 10
+00:20:26   Bi2O6W enthalpy: -5.263428242222222, fit: {'enthalpy': 5.263428242222222}, dominators: 11
+00:20:26   Bi2O6W enthalpy: -4.619584798888889, fit: {'enthalpy': 4.619584798888889}, dominators: 12
+00:20:26   save good.traj
+00:20:26   save good1.traj
+00:20:26   set keep population..
+00:20:26   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+00:20:27   construct Population keep with 3 individual
+00:20:27   keep ind:
+00:20:27   Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 0
+00:20:27   Bi2O6W enthalpy: -6.77486581, fit: {'enthalpy': 6.77486581}, dominators: 2
+00:20:27   Bi2O6W enthalpy: -6.590289972222222, fit: {'enthalpy': 6.590289972222222}, dominators: 4
+00:20:27   save keep1.traj
+00:20:27   best ind:
+00:20:27   calculating dominators...
+00:20:27   calculating fitness...
+00:20:27   Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}
+00:20:27   save best.traj
+00:20:27   ============= Generation 2 =============
+00:20:27   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 13
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+00:20:27   change volRatio from 3 to 3.2706067991772625
+00:20:27   construct Population temp with 13 individual
+00:20:27   calculating dominators...
+00:20:27   calculating fitness...
+00:20:27   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+00:20:27   construct Population init with 0 individual
+00:20:27   success SlipMutation in init1-1
+00:20:27   success SlipMutation in init1-1
+00:20:27   success LatticeMutation in init1-16
+00:20:27   success RippleMutation in init1-16
+00:20:27   success SlipMutation in init1-12
+00:20:27   success SlipMutation in init1-12
+00:20:27   success LatticeMutation in init1-1
+00:20:27   success SlipMutation in init1-12
+00:20:27   success RattleMutation in init1-12
+00:20:27   success SlipMutation in init1-16
+00:20:27   success LatticeMutation in init1-15
+00:20:27   success PermMutation in init1-12
+00:20:27   success RippleMutation in init1-2
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+00:20:27   success CutAndSplicePairing between init1-12 and init1-12
+00:20:27   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       1       |     1      |
+|     SlipMutation    |    16.67%    |       6       |     6      |
+|   LatticeMutation   |    16.67%    |       3       |     3      |
+|    RippleMutation   |    16.67%    |       2       |     2      |
+|    RattleMutation   |    16.67%    |       1       |     1      |
+|     PermMutation    |    16.67%    |       1       |     1      |
++---------------------+--------------+---------------+------------+
+00:20:27   check population init, popsize:14
+00:20:27   check survival: 14
+00:20:27   Reading Seeds ...
+00:20:27   construct Population seed with 0 individual
+00:20:27   check population init, popsize:20
+00:20:27   check survival: 20
+00:20:27   Generate new initial population with 20 individuals:
+00:20:27     PermMutation: 1
+00:20:27     RattleMutation: 1
+00:20:27     LatticeMutation: 3
+00:20:27     SlipMutation: 6
+00:20:27     random: 6
+00:20:27     CutAndSplicePairing: 1
+00:20:27     RippleMutation: 2
+00:20:27   save init2.traj
+00:21:08   VASP finish
+00:21:47   VASP finish
+00:22:40   VASP finish
+00:23:23   VASP finish
+00:26:27   VASP finish
+00:29:39   VASP finish
+00:29:52   VASP finish
+00:32:10   VASP finish
+00:33:20   VASP finish
+00:33:41   VASP finish
+00:34:21   VASP finish
+00:37:40   VASP finish
+00:40:29   VASP finish
+00:43:54   VASP finish
+00:45:19   VASP finish
+00:45:45   VASP finish
+00:46:23   VASP finish
+00:47:27   VASP finish
+00:47:41   VASP finish
+00:47:57   VASP finish
+00:48:25   VASP finish
+00:48:40   VASP finish
+00:50:01   VASP finish
+00:50:57   VASP finish
+00:51:07   VASP finish
+00:51:39   VASP finish
+00:51:54   VASP finish
+00:52:25   VASP finish
+00:52:36   VASP finish
+00:55:07   VASP finish
+00:56:10   VASP finish
+00:56:38   VASP finish
+00:57:38   VASP finish
+00:58:31   VASP finish
+00:59:18   VASP finish
+00:59:34   VASP finish
+01:02:06   VASP finish
+01:02:37   VASP finish
+01:03:16   VASP finish
+01:03:25   VASP finish
+01:07:49   VASP finish
+01:11:44   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+01:12:41   Error 'list index out of range' happened on line 108
+01:12:41   VASP fail
+01:17:48   VASP finish
+01:24:09   VASP finish
+01:28:23   VASP finish
+01:32:14   VASP finish
+01:37:28   VASP finish
+01:42:15   VASP finish
+01:45:29   VASP finish
+01:49:57   VASP finish
+01:54:53   VASP finish
+02:01:21   VASP finish
+02:06:24   VASP finish
+02:08:53   VASP finish
+02:11:25   VASP finish
+02:13:15   VASP finish
+02:17:29   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+02:20:19   Error 'list index out of range' happened on line 108
+02:20:19   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+02:22:18   Error 'list index out of range' happened on line 108
+02:22:18   VASP fail
+02:24:05   VASP finish
+02:25:18   VASP finish
+02:27:07   VASP finish
+02:28:55   VASP finish
+02:30:44   VASP finish
+02:31:56   VASP finish
+02:33:30   VASP finish
+02:35:19   VASP finish
+02:36:49   VASP finish
+02:37:48   VASP finish
+02:39:41   VASP finish
+02:41:38   VASP finish
+02:43:13   VASP finish
+02:43:54   VASP finish
+02:44:43   VASP finish
+02:45:14   VASP finish
+02:47:20   VASP finish
+02:47:20   construct Population temp with 17 individual
+02:47:20   save raw2.traj
+02:47:20   check population temp, popsize:17
+02:47:20   check survival: 17
+02:47:20   find spg...
+02:47:20   delete duplicate structures...
+02:47:20   calculating dominators...
+02:47:20   calculating fitness...
+02:47:20   del_duplicate temp begin, popsize:17
+02:47:20   del_duplicate survival: 14
+02:47:20   save gen2.traj
+02:47:20   set good population..
+02:47:20   construct goodPop
+02:47:20   construct Population temp with 14 individual
+02:47:20   construct Population temp with 27 individual
+02:47:20   calculating dominators...
+02:47:20   calculating fitness...
+02:47:20   del_duplicate temp begin, popsize:30
+02:47:20   del_duplicate survival: 27
+02:47:20   calculating dominators...
+02:47:20   calculating fitness...
+02:47:20   calculating dominators...
+02:47:20   calculating fitness...
+02:47:20   good ind:
+02:47:20   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 0
+02:47:20   Bi2O6W enthalpy: -7.457673483333333, fit: {'enthalpy': 7.457673483333333}, dominators: 1
+02:47:20   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 2
+02:47:20   Bi2O6W enthalpy: -7.424907996666666, fit: {'enthalpy': 7.424907996666666}, dominators: 3
+02:47:20   Bi2O6W enthalpy: -7.416688295555556, fit: {'enthalpy': 7.416688295555556}, dominators: 4
+02:47:20   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 5
+02:47:20   Bi2O6W enthalpy: -7.411409601111111, fit: {'enthalpy': 7.411409601111111}, dominators: 6
+02:47:20   Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 7
+02:47:20   Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 8
+02:47:20   Bi2O6W enthalpy: -7.376433687777778, fit: {'enthalpy': 7.376433687777778}, dominators: 9
+02:47:20   Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 10
+02:47:20   Bi2O6W enthalpy: -7.3157906455555555, fit: {'enthalpy': 7.3157906455555555}, dominators: 11
+02:47:20   Bi2O6W enthalpy: -7.299364554444444, fit: {'enthalpy': 7.299364554444444}, dominators: 12
+02:47:20   Bi2O6W enthalpy: -7.196718264444446, fit: {'enthalpy': 7.196718264444446}, dominators: 13
+02:47:20   Bi2O6W enthalpy: -6.77486581, fit: {'enthalpy': 6.77486581}, dominators: 14
+02:47:20   Bi2O6W enthalpy: -6.751906435555556, fit: {'enthalpy': 6.751906435555556}, dominators: 15
+02:47:20   Bi2O6W enthalpy: -6.590289972222222, fit: {'enthalpy': 6.590289972222222}, dominators: 16
+02:47:20   Bi2O6W enthalpy: -6.295161076666667, fit: {'enthalpy': 6.295161076666667}, dominators: 17
+02:47:20   Bi2O6W enthalpy: -5.897447166666667, fit: {'enthalpy': 5.897447166666667}, dominators: 18
+02:47:20   Bi2O6W enthalpy: -5.851094608888889, fit: {'enthalpy': 5.851094608888889}, dominators: 19
+02:47:20   save good.traj
+02:47:20   save good2.traj
+02:47:20   set keep population..
+02:47:20   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+02:47:20   construct Population keep with 3 individual
+02:47:20   keep ind:
+02:47:20   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 2
+02:47:20   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 0
+02:47:20   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 5
+02:47:20   save keep2.traj
+02:47:20   best ind:
+02:47:20   calculating dominators...
+02:47:20   calculating fitness...
+02:47:20   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}
+02:47:20   save best.traj
+02:47:20   ============= Generation 3 =============
+02:47:20   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 14
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+02:47:20   change volRatio from 3.2706067991772625 to 3.1487595599274796
+02:47:20   construct Population temp with 14 individual
+02:47:20   calculating dominators...
+02:47:20   calculating fitness...
+02:47:20   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+02:47:20   construct Population init with 0 individual
+02:47:20   success RippleMutation in init2-9
+02:47:20   success RattleMutation in init2-0
+02:47:20   success LatticeMutation in init2-11
+02:47:20   success LatticeMutation in init2-8
+02:47:20   success RattleMutation in init2-8
+02:47:20   success RippleMutation in init2-0
+02:47:20   success RippleMutation in init2-8
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+02:47:20   success CutAndSplicePairing between init2-0 and init2-0
+02:47:20   success PermMutation in init2-8
+02:47:20   success PermMutation in init2-0
+02:47:20   success SlipMutation in init2-0
+02:47:20   success RippleMutation in init2-8
+02:47:20   success LatticeMutation in init2-8
+02:47:20   success LatticeMutation in init2-8
+02:47:20   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       1       |     1      |
+|     SlipMutation    |    16.67%    |       1       |     1      |
+|   LatticeMutation   |    16.67%    |       4       |     4      |
+|    RippleMutation   |    16.67%    |       4       |     4      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+02:47:20   check population init, popsize:14
+02:47:21   check survival: 14
+02:47:21   Reading Seeds ...
+02:47:21   construct Population seed with 0 individual
+02:47:21   check population init, popsize:20
+02:47:21   check survival: 20
+02:47:21   Generate new initial population with 20 individuals:
+02:47:21     PermMutation: 2
+02:47:21     RattleMutation: 2
+02:47:21     LatticeMutation: 4
+02:47:21     SlipMutation: 1
+02:47:21     random: 6
+02:47:21     CutAndSplicePairing: 1
+02:47:21     RippleMutation: 4
+02:47:21   save init3.traj
+02:48:30   VASP finish
+02:49:29   VASP finish
+02:50:08   VASP finish
+02:50:45   VASP finish
+02:51:25   VASP finish
+02:51:40   VASP finish
+02:52:49   VASP finish
+02:53:01   VASP finish
+02:55:04   VASP finish
+02:56:02   VASP finish
+02:56:51   VASP finish
+02:58:07   VASP finish
+02:58:31   VASP finish
+02:58:47   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+02:59:04   Error 'list index out of range' happened on line 108
+02:59:04   VASP fail
+02:59:42   VASP finish
+03:01:01   VASP finish
+03:02:44   VASP finish
+03:03:06   VASP finish
+03:03:29   VASP finish
+03:04:04   VASP finish
+03:05:29   VASP finish
+03:05:57   VASP finish
+03:06:15   VASP finish
+03:06:49   VASP finish
+03:07:08   VASP finish
+03:08:00   VASP finish
+03:11:11   VASP finish
+03:11:51   VASP finish
+03:14:08   VASP finish
+03:14:29   VASP finish
+03:15:19   VASP finish
+03:15:41   VASP finish
+03:16:05   VASP finish
+03:17:16   VASP finish
+03:17:34   VASP finish
+03:18:44   VASP finish
+03:18:54   VASP finish
+03:19:18   VASP finish
+03:24:31   VASP finish
+03:28:23   VASP finish
+03:32:21   VASP finish
+03:37:31   VASP finish
+03:43:07   VASP finish
+03:46:31   VASP finish
+03:50:05   VASP finish
+03:52:49   VASP finish
+03:56:33   VASP finish
+04:00:49   VASP finish
+04:03:35   VASP finish
+04:09:27   VASP finish
+04:13:20   VASP finish
+04:18:34   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+04:19:25   Error 'list index out of range' happened on line 108
+04:19:25   VASP fail
+04:23:45   VASP finish
+04:30:08   VASP finish
+04:33:41   VASP finish
+04:34:48   VASP finish
+04:37:06   VASP finish
+04:38:36   VASP finish
+04:39:59   VASP finish
+04:41:46   VASP finish
+04:42:58   VASP finish
+04:46:13   VASP finish
+04:47:54   VASP finish
+04:49:30   VASP finish
+04:51:01   VASP finish
+04:52:43   VASP finish
+04:54:53   VASP finish
+04:56:13   VASP finish
+04:57:26   VASP finish
+04:59:14   VASP finish
+04:59:41   VASP finish
+05:00:35   VASP finish
+05:01:09   VASP finish
+05:01:43   VASP finish
+05:01:43   construct Population temp with 18 individual
+05:01:43   save raw3.traj
+05:01:43   check population temp, popsize:18
+05:01:43   check survival: 18
+05:01:43   find spg...
+05:01:43   delete duplicate structures...
+05:01:43   calculating dominators...
+05:01:43   calculating fitness...
+05:01:43   del_duplicate temp begin, popsize:18
+05:01:43   del_duplicate survival: 13
+05:01:43   save gen3.traj
+05:01:43   set good population..
+05:01:43   construct goodPop
+05:01:43   construct Population temp with 13 individual
+05:01:43   construct Population temp with 33 individual
+05:01:43   calculating dominators...
+05:01:43   calculating fitness...
+05:01:43   del_duplicate temp begin, popsize:36
+05:01:43   del_duplicate survival: 28
+05:01:43   calculating dominators...
+05:01:43   calculating fitness...
+05:01:43   calculating dominators...
+05:01:43   calculating fitness...
+05:01:43   good ind:
+05:01:43   Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 0
+05:01:43   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 1
+05:01:43   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 2
+05:01:43   Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 3
+05:01:43   Bi2O6W enthalpy: -7.437262908888889, fit: {'enthalpy': 7.437262908888889}, dominators: 4
+05:01:43   Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 5
+05:01:43   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 6
+05:01:43   Bi2O6W enthalpy: -7.417544766666667, fit: {'enthalpy': 7.417544766666667}, dominators: 7
+05:01:43   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 8
+05:01:43   Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 9
+05:01:43   Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 10
+05:01:43   Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 11
+05:01:43   Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 12
+05:01:43   Bi2O6W enthalpy: -7.376433687777778, fit: {'enthalpy': 7.376433687777778}, dominators: 13
+05:01:43   Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 14
+05:01:43   Bi2O6W enthalpy: -7.3157906455555555, fit: {'enthalpy': 7.3157906455555555}, dominators: 15
+05:01:43   Bi2O6W enthalpy: -7.299364554444444, fit: {'enthalpy': 7.299364554444444}, dominators: 16
+05:01:43   Bi2O6W enthalpy: -7.248946392222223, fit: {'enthalpy': 7.248946392222223}, dominators: 17
+05:01:43   Bi2O6W enthalpy: -7.196718264444446, fit: {'enthalpy': 7.196718264444446}, dominators: 18
+05:01:43   Bi2O6W enthalpy: -6.915587085555555, fit: {'enthalpy': 6.915587085555555}, dominators: 19
+05:01:43   save good.traj
+05:01:43   save good3.traj
+05:01:43   set keep population..
+05:01:43   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+05:01:43   construct Population keep with 3 individual
+05:01:43   keep ind:
+05:01:43   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 1
+05:01:43   Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 0
+05:01:43   Bi2O6W enthalpy: -7.376433687777778, fit: {'enthalpy': 7.376433687777778}, dominators: 13
+05:01:43   save keep3.traj
+05:01:43   best ind:
+05:01:43   calculating dominators...
+05:01:43   calculating fitness...
+05:01:43   Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}
+05:01:43   save best.traj
+05:01:43   ============= Generation 4 =============
+05:01:43   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 13
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+05:01:43   change volRatio from 3.1487595599274796 to 2.9365990263919954
+05:01:43   construct Population temp with 13 individual
+05:01:43   calculating dominators...
+05:01:43   calculating fitness...
+05:01:43   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+05:01:43   construct Population init with 0 individual
+05:01:43   success RippleMutation in init3-0
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+05:01:43   success CutAndSplicePairing between init3-0 and init3-0
+05:01:43   success SlipMutation in init3-18
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+05:01:43   success CutAndSplicePairing between init3-17 and init2-16
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+05:01:43   success CutAndSplicePairing between init3-0 and init3-0
+05:01:43   success LatticeMutation in init3-10
+05:01:43   success LatticeMutation in init3-0
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+05:01:43   success CutAndSplicePairing between init3-0 and init3-6
+05:01:43   success RattleMutation in init3-0
+05:01:43   success LatticeMutation in init3-0
+05:01:43   success LatticeMutation in init3-2
+05:01:43   success SlipMutation in init3-2
+05:01:43   success PermMutation in init3-0
+05:01:43   success SlipMutation in init3-7
+05:01:43   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       4       |     4      |
+|     SlipMutation    |    16.67%    |       3       |     3      |
+|   LatticeMutation   |    16.67%    |       4       |     4      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       1       |     1      |
+|     PermMutation    |    16.67%    |       1       |     1      |
++---------------------+--------------+---------------+------------+
+05:01:43   check population init, popsize:14
+05:01:44   check survival: 14
+05:01:44   Reading Seeds ...
+05:01:44   construct Population seed with 0 individual
+05:01:44   check population init, popsize:20
+05:01:44   check survival: 20
+05:01:44   Generate new initial population with 20 individuals:
+05:01:44     PermMutation: 1
+05:01:44     RattleMutation: 1
+05:01:44     LatticeMutation: 4
+05:01:44     SlipMutation: 3
+05:01:44     random: 6
+05:01:44     CutAndSplicePairing: 4
+05:01:44     RippleMutation: 1
+05:01:44   save init4.traj
+05:02:17   VASP finish
+05:03:19   VASP finish
+05:05:17   VASP finish
+05:06:18   VASP finish
+05:07:19   VASP finish
+05:07:48   VASP finish
+05:07:59   VASP finish
+05:08:57   VASP finish
+05:10:01   VASP finish
+05:10:19   VASP finish
+05:11:37   VASP finish
+05:13:14   VASP finish
+05:14:01   VASP finish
+05:14:39   VASP finish
+05:15:39   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+05:15:52   Error 'list index out of range' happened on line 108
+05:15:52   VASP fail
+05:17:15   VASP finish
+05:17:30   VASP finish
+05:17:53   VASP finish
+05:18:19   VASP finish
+05:18:42   VASP finish
+05:19:32   VASP finish
+05:19:57   VASP finish
+05:20:38   VASP finish
+05:20:58   VASP finish
+05:21:25   VASP finish
+05:21:42   VASP finish
+05:22:13   VASP finish
+05:23:10   VASP finish
+05:23:42   VASP finish
+05:24:10   VASP finish
+05:25:32   VASP finish
+05:26:22   VASP finish
+05:27:11   VASP finish
+05:27:43   VASP finish
+05:29:02   VASP finish
+05:29:31   VASP finish
+05:30:04   VASP finish
+05:31:23   VASP finish
+05:36:02   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+05:39:13   Error 'list index out of range' happened on line 108
+05:39:13   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+05:40:35   Error 'list index out of range' happened on line 108
+05:40:35   VASP fail
+05:45:31   VASP finish
+05:49:00   VASP finish
+05:52:22   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+05:53:42   Error 'list index out of range' happened on line 108
+05:53:42   VASP fail
+05:56:52   VASP finish
+06:01:48   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+06:04:19   Error 'list index out of range' happened on line 108
+06:04:19   VASP fail
+06:07:26   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+06:10:11   Error 'list index out of range' happened on line 108
+06:10:11   VASP fail
+06:13:40   VASP finish
+06:17:21   VASP finish
+06:21:02   VASP finish
+06:25:54   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+06:29:11   Error 'list index out of range' happened on line 108
+06:29:11   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+06:30:46   Error 'list index out of range' happened on line 108
+06:30:46   VASP fail
+06:33:32   VASP finish
+06:34:46   VASP finish
+06:35:54   VASP finish
+06:37:11   VASP finish
+06:39:27   VASP finish
+06:40:27   VASP finish
+06:41:29   VASP finish
+06:42:42   VASP finish
+06:44:21   VASP finish
+06:45:20   VASP finish
+06:45:49   VASP finish
+06:46:38   VASP finish
+06:47:12   VASP finish
+06:47:12   construct Population temp with 12 individual
+06:47:12   save raw4.traj
+06:47:12   check population temp, popsize:12
+06:47:12   check survival: 12
+06:47:12   find spg...
+06:47:12   delete duplicate structures...
+06:47:12   calculating dominators...
+06:47:12   calculating fitness...
+06:47:12   del_duplicate temp begin, popsize:12
+06:47:12   del_duplicate survival: 12
+06:47:12   save gen4.traj
+06:47:12   set good population..
+06:47:12   construct goodPop
+06:47:12   construct Population temp with 12 individual
+06:47:12   construct Population temp with 32 individual
+06:47:12   calculating dominators...
+06:47:12   calculating fitness...
+06:47:12   del_duplicate temp begin, popsize:35
+06:47:12   del_duplicate survival: 29
+06:47:12   calculating dominators...
+06:47:12   calculating fitness...
+06:47:12   calculating dominators...
+06:47:12   calculating fitness...
+06:47:12   good ind:
+06:47:12   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 0
+06:47:12   Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 1
+06:47:12   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 2
+06:47:12   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 3
+06:47:12   Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 4
+06:47:12   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 5
+06:47:12   Bi2O6W enthalpy: -7.437262908888889, fit: {'enthalpy': 7.437262908888889}, dominators: 6
+06:47:12   Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 7
+06:47:12   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 8
+06:47:12   Bi2O6W enthalpy: -7.417544766666667, fit: {'enthalpy': 7.417544766666667}, dominators: 9
+06:47:12   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 10
+06:47:12   Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 11
+06:47:12   Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 12
+06:47:12   Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 13
+06:47:12   Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 14
+06:47:12   Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 15
+06:47:12   Bi2O6W enthalpy: -7.343195531111111, fit: {'enthalpy': 7.343195531111111}, dominators: 16
+06:47:12   Bi2O6W enthalpy: -7.342937446666667, fit: {'enthalpy': 7.342937446666667}, dominators: 17
+06:47:12   Bi2O6W enthalpy: -7.329074237777778, fit: {'enthalpy': 7.329074237777778}, dominators: 18
+06:47:12   Bi2O6W enthalpy: -7.3157906455555555, fit: {'enthalpy': 7.3157906455555555}, dominators: 19
+06:47:12   save good.traj
+06:47:12   save good4.traj
+06:47:12   set keep population..
+06:47:12   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+06:47:12   construct Population keep with 3 individual
+06:47:12   keep ind:
+06:47:12   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 0
+06:47:12   Bi2O6W enthalpy: -7.518717112222223, fit: {'enthalpy': 7.518717112222223}, dominators: 1
+06:47:12   Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 15
+06:47:12   save keep4.traj
+06:47:12   best ind:
+06:47:12   calculating dominators...
+06:47:12   calculating fitness...
+06:47:12   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}
+06:47:12   save best.traj
+06:47:12   ============= Generation 5 =============
+06:47:12   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 12
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+06:47:12   change volRatio from 2.9365990263919954 to 2.8870420384014928
+06:47:12   construct Population temp with 12 individual
+06:47:12   calculating dominators...
+06:47:12   calculating fitness...
+06:47:12   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+06:47:12   construct Population init with 0 individual
+06:47:12   success PermMutation in init4-8
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+06:47:12   success CutAndSplicePairing between init4-8 and init4-8
+06:47:12   success SlipMutation in init4-0
+06:47:12   success LatticeMutation in init4-0
+06:47:12   success SlipMutation in init3-0
+06:47:12   success RattleMutation in init4-8
+06:47:12   success PermMutation in init4-5
+06:47:12   success RippleMutation in init4-12
+06:47:12   success SlipMutation in init3-0
+06:47:12   success LatticeMutation in init4-8
+06:47:12   success SlipMutation in init4-8
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+06:47:12   success CutAndSplicePairing between init4-8 and init4-8
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+06:47:12   success CutAndSplicePairing between init4-5 and init4-8
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+06:47:12   success CutAndSplicePairing between init4-10 and init4-10
+06:47:12   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       4       |     4      |
+|     SlipMutation    |    16.67%    |       4       |     4      |
+|   LatticeMutation   |    16.67%    |       2       |     2      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       1       |     1      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+06:47:12   check population init, popsize:14
+06:47:12   check survival: 14
+06:47:13   Reading Seeds ...
+06:47:13   construct Population seed with 0 individual
+06:47:13   check population init, popsize:20
+06:47:13   Fail in check_cell, origin = random
+06:47:13   check survival: 19
+06:47:13   Generate new initial population with 19 individuals:
+06:47:13     PermMutation: 2
+06:47:13     RattleMutation: 1
+06:47:13     LatticeMutation: 2
+06:47:13     SlipMutation: 4
+06:47:13     random: 5
+06:47:13     CutAndSplicePairing: 4
+06:47:13     RippleMutation: 1
+06:47:13   save init5.traj
+06:47:46   VASP finish
+06:48:39   VASP finish
+06:49:47   VASP finish
+06:50:02   VASP finish
+06:50:18   VASP finish
+06:50:45   VASP finish
+06:51:41   VASP finish
+06:52:47   VASP finish
+06:53:51   VASP finish
+06:54:07   VASP finish
+06:55:19   VASP finish
+06:56:51   VASP finish
+06:58:07   VASP finish
+06:58:55   VASP finish
+06:59:25   VASP finish
+07:00:00   VASP finish
+07:00:51   VASP finish
+07:01:51   VASP finish
+07:02:09   VASP finish
+07:02:33   VASP finish
+07:02:38   VASP finish
+07:03:40   VASP finish
+07:04:10   VASP finish
+07:04:20   VASP finish
+07:04:25   VASP finish
+07:05:29   VASP finish
+07:05:50   VASP finish
+07:06:45   VASP finish
+07:06:51   VASP finish
+07:06:57   VASP finish
+07:07:08   VASP finish
+07:07:23   VASP finish
+07:09:39   VASP finish
+07:09:49   VASP finish
+07:11:02   VASP finish
+07:11:18   VASP finish
+07:11:30   VASP finish
+07:12:02   VASP finish
+07:19:55   VASP finish
+07:21:44   VASP finish
+07:25:38   VASP finish
+07:29:47   VASP finish
+07:32:33   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+07:35:19   Error 'list index out of range' happened on line 108
+07:35:19   VASP fail
+07:39:07   VASP finish
+07:43:27   VASP finish
+07:47:04   VASP finish
+07:50:03   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+07:52:17   Error 'list index out of range' happened on line 108
+07:52:17   VASP fail
+07:56:03   VASP finish
+08:00:44   VASP finish
+08:05:23   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+08:06:39   Error 'list index out of range' happened on line 108
+08:06:39   VASP fail
+08:11:14   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+08:12:00   Error 'list index out of range' happened on line 108
+08:12:00   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+08:12:47   Error 'list index out of range' happened on line 108
+08:12:47   VASP fail
+08:13:33   VASP finish
+08:14:55   VASP finish
+08:16:12   VASP finish
+08:17:50   VASP finish
+08:19:23   VASP finish
+08:21:36   VASP finish
+08:23:01   VASP finish
+08:24:16   VASP finish
+08:25:48   VASP finish
+08:27:05   VASP finish
+08:28:14   VASP finish
+08:29:16   VASP finish
+08:30:33   VASP finish
+08:31:54   VASP finish
+08:32:26   VASP finish
+08:32:26   construct Population temp with 14 individual
+08:32:26   save raw5.traj
+08:32:26   check population temp, popsize:14
+08:32:26   check survival: 14
+08:32:26   find spg...
+08:32:26   delete duplicate structures...
+08:32:26   calculating dominators...
+08:32:26   calculating fitness...
+08:32:26   del_duplicate temp begin, popsize:14
+08:32:26   del_duplicate survival: 12
+08:32:26   save gen5.traj
+08:32:26   set good population..
+08:32:26   construct goodPop
+08:32:26   construct Population temp with 12 individual
+08:32:26   construct Population temp with 32 individual
+08:32:26   calculating dominators...
+08:32:26   calculating fitness...
+08:32:26   del_duplicate temp begin, popsize:35
+08:32:26   del_duplicate survival: 27
+08:32:26   calculating dominators...
+08:32:26   calculating fitness...
+08:32:26   calculating dominators...
+08:32:26   calculating fitness...
+08:32:26   good ind:
+08:32:26   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+08:32:26   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+08:32:26   Bi2O6W enthalpy: -7.523473796666668, fit: {'enthalpy': 7.523473796666668}, dominators: 2
+08:32:26   Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+08:32:26   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+08:32:26   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+08:32:26   Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 6
+08:32:26   Bi2O6W enthalpy: -7.460073798888889, fit: {'enthalpy': 7.460073798888889}, dominators: 7
+08:32:26   Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+08:32:26   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 9
+08:32:26   Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 10
+08:32:26   Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 11
+08:32:26   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 12
+08:32:26   Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 13
+08:32:26   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 14
+08:32:26   Bi2O6W enthalpy: -7.394536061111111, fit: {'enthalpy': 7.394536061111111}, dominators: 15
+08:32:26   Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 16
+08:32:26   Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 17
+08:32:26   Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 18
+08:32:26   Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 19
+08:32:26   save good.traj
+08:32:26   save good5.traj
+08:32:26   set keep population..
+08:32:26   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+08:32:26   construct Population keep with 3 individual
+08:32:26   keep ind:
+08:32:26   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+08:32:26   Bi2O6W enthalpy: -7.523473796666668, fit: {'enthalpy': 7.523473796666668}, dominators: 2
+08:32:26   Bi2O6W enthalpy: -7.377298045555556, fit: {'enthalpy': 7.377298045555556}, dominators: 19
+08:32:26   save keep5.traj
+08:32:26   best ind:
+08:32:26   calculating dominators...
+08:32:26   calculating fitness...
+08:32:26   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+08:32:26   save best.traj
+08:32:26   ============= Generation 6 =============
+08:32:26   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 12
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+08:32:26   change volRatio from 2.8870420384014928 to 2.8697422546800997
+08:32:26   construct Population temp with 12 individual
+08:32:26   calculating dominators...
+08:32:26   calculating fitness...
+08:32:26   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+08:32:26   construct Population init with 0 individual
+08:32:26   success PermMutation in init5-4
+08:32:26   success PermMutation in init5-9
+08:32:26   success PermMutation in init5-9
+08:32:26   success SlipMutation in init5-9
+08:32:26   success SlipMutation in init5-9
+08:32:26   success SlipMutation in init5-9
+08:32:26   success PermMutation in init5-13
+08:32:26   success PermMutation in init5-9
+08:32:26   success SlipMutation in init5-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+08:32:26   success CutAndSplicePairing between init5-9 and init5-11
+08:32:26   success RattleMutation in init5-4
+08:32:26   success LatticeMutation in init5-9
+08:32:26   success RattleMutation in init5-4
+08:32:26   success LatticeMutation in init5-4
+08:32:26   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       1       |     1      |
+|     SlipMutation    |    16.67%    |       4       |     4      |
+|   LatticeMutation   |    16.67%    |       2       |     2      |
+|    RippleMutation   |    16.67%    |       0       |     0      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       5       |     5      |
++---------------------+--------------+---------------+------------+
+08:32:26   check population init, popsize:14
+08:32:26   Fail in check_cell, origin = PermMutation
+08:32:26   Fail in check_cell, origin = PermMutation
+08:32:26   Fail in check_cell, origin = SlipMutation
+08:32:26   Fail in check_cell, origin = SlipMutation
+08:32:26   Fail in check_cell, origin = SlipMutation
+08:32:26   Fail in check_cell, origin = PermMutation
+08:32:26   Fail in check_cell, origin = SlipMutation
+08:32:26   Fail in check_cell, origin = LatticeMutation
+08:32:26   check survival: 6
+08:32:27   Reading Seeds ...
+08:32:27   construct Population seed with 0 individual
+08:32:27   check population init, popsize:20
+08:32:27   Fail in check_cell, origin = random
+08:32:27   Fail in check_cell, origin = random
+08:32:27   check survival: 18
+08:32:27   Generate new initial population with 18 individuals:
+08:32:27     PermMutation: 2
+08:32:27     RattleMutation: 2
+08:32:27     LatticeMutation: 1
+08:32:27     random: 12
+08:32:27     CutAndSplicePairing: 1
+08:32:27   save init6.traj
+08:33:26   VASP finish
+08:34:33   VASP finish
+08:35:29   VASP finish
+08:35:49   VASP finish
+08:36:24   VASP finish
+08:36:33   VASP finish
+08:37:03   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+08:37:19   Error 'list index out of range' happened on line 108
+08:37:19   VASP fail
+08:38:22   VASP finish
+08:39:27   VASP finish
+08:40:31   VASP finish
+08:40:41   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+08:40:58   Error 'list index out of range' happened on line 108
+08:40:58   VASP fail
+08:44:36   VASP finish
+08:44:56   VASP finish
+08:46:21   VASP finish
+08:46:34   VASP finish
+08:47:40   VASP finish
+08:49:24   VASP finish
+08:50:30   VASP finish
+08:50:50   VASP finish
+08:51:01   VASP finish
+08:51:46   VASP finish
+08:52:01   VASP finish
+08:52:22   VASP finish
+08:52:39   VASP finish
+08:53:19   VASP finish
+08:54:05   VASP finish
+08:54:32   VASP finish
+08:57:11   VASP finish
+08:57:49   VASP finish
+08:58:27   VASP finish
+08:59:40   VASP finish
+08:59:57   VASP finish
+09:03:04   VASP finish
+09:06:38   VASP finish
+09:12:47   VASP finish
+09:15:01   VASP finish
+09:18:25   VASP finish
+09:20:16   VASP finish
+09:23:54   VASP finish
+09:28:35   VASP finish
+09:36:49   VASP finish
+09:41:59   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+09:43:00   Error 'list index out of range' happened on line 108
+09:43:00   VASP fail
+09:44:02   VASP finish
+09:44:25   VASP finish
+09:55:09   VASP finish
+09:59:08   VASP finish
+10:01:53   VASP finish
+10:03:12   VASP finish
+10:04:28   VASP finish
+10:05:29   VASP finish
+10:06:52   VASP finish
+10:08:26   VASP finish
+10:10:19   VASP finish
+10:11:13   VASP finish
+10:11:37   VASP finish
+10:13:31   VASP finish
+10:14:27   VASP finish
+10:15:22   VASP finish
+10:15:40   VASP finish
+10:17:56   VASP finish
+10:18:43   VASP finish
+10:19:16   VASP finish
+10:19:16   construct Population temp with 15 individual
+10:19:16   save raw6.traj
+10:19:16   check population temp, popsize:15
+10:19:16   check survival: 15
+10:19:16   find spg...
+10:19:16   delete duplicate structures...
+10:19:16   calculating dominators...
+10:19:16   calculating fitness...
+10:19:16   del_duplicate temp begin, popsize:15
+10:19:16   del_duplicate survival: 14
+10:19:16   save gen6.traj
+10:19:16   set good population..
+10:19:16   construct goodPop
+10:19:16   construct Population temp with 14 individual
+10:19:16   construct Population temp with 34 individual
+10:19:16   calculating dominators...
+10:19:16   calculating fitness...
+10:19:16   del_duplicate temp begin, popsize:37
+10:19:16   del_duplicate survival: 31
+10:19:16   calculating dominators...
+10:19:16   calculating fitness...
+10:19:16   calculating dominators...
+10:19:16   calculating fitness...
+10:19:16   good ind:
+10:19:16   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+10:19:16   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+10:19:16   Bi2O6W enthalpy: -7.523557704444444, fit: {'enthalpy': 7.523557704444444}, dominators: 2
+10:19:16   Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+10:19:16   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+10:19:16   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+10:19:16   Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 6
+10:19:16   Bi2O6W enthalpy: -7.460073798888889, fit: {'enthalpy': 7.460073798888889}, dominators: 7
+10:19:16   Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+10:19:16   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 9
+10:19:16   Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 10
+10:19:16   Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 11
+10:19:16   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 12
+10:19:16   Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 13
+10:19:16   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 14
+10:19:16   Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 15
+10:19:16   Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 16
+10:19:16   Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 17
+10:19:16   Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 18
+10:19:16   Bi2O6W enthalpy: -7.38329929888889, fit: {'enthalpy': 7.38329929888889}, dominators: 19
+10:19:16   save good.traj
+10:19:16   save good6.traj
+10:19:16   set keep population..
+10:19:16   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+10:19:16   construct Population keep with 3 individual
+10:19:16   keep ind:
+10:19:16   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 9
+10:19:16   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+10:19:16   Bi2O6W enthalpy: -7.523557704444444, fit: {'enthalpy': 7.523557704444444}, dominators: 2
+10:19:16   save keep6.traj
+10:19:16   best ind:
+10:19:16   calculating dominators...
+10:19:16   calculating fitness...
+10:19:16   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+10:19:16   save best.traj
+10:19:16   ============= Generation 7 =============
+10:19:16   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 14
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+10:19:16   change volRatio from 2.8697422546800997 to 3.0791766103400544
+10:19:16   construct Population temp with 14 individual
+10:19:16   calculating dominators...
+10:19:16   calculating fitness...
+10:19:16   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+10:19:16   construct Population init with 0 individual
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+10:19:16   success CutAndSplicePairing between init5-9 and init6-15
+10:19:16   success SlipMutation in init5-9
+10:19:16   success LatticeMutation in init6-13
+10:19:16   success SlipMutation in init6-13
+10:19:16   success RippleMutation in init6-18
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+10:19:16   success CutAndSplicePairing between init6-9 and init6-6
+10:19:16   success LatticeMutation in init4-0
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+10:19:16   success CutAndSplicePairing between init6-9 and init5-9
+10:19:16   success RippleMutation in init6-15
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+10:19:16   success CutAndSplicePairing between init6-6 and init5-9
+10:19:16   success SlipMutation in init6-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+10:19:16   success CutAndSplicePairing between init4-0 and init6-13
+10:19:16   success LatticeMutation in init6-13
+10:19:16   success RippleMutation in init6-0
+10:19:16   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       5       |     5      |
+|     SlipMutation    |    16.67%    |       3       |     3      |
+|   LatticeMutation   |    16.67%    |       3       |     3      |
+|    RippleMutation   |    16.67%    |       3       |     3      |
+|    RattleMutation   |    16.67%    |       0       |     0      |
+|     PermMutation    |    16.67%    |       0       |     0      |
++---------------------+--------------+---------------+------------+
+10:19:16   check population init, popsize:14
+10:19:16   Fail in check_cell, origin = SlipMutation
+10:19:16   check survival: 13
+10:19:16   Reading Seeds ...
+10:19:16   construct Population seed with 0 individual
+10:19:16   check population init, popsize:20
+10:19:17   check survival: 20
+10:19:17   Generate new initial population with 20 individuals:
+10:19:17     LatticeMutation: 3
+10:19:17     SlipMutation: 2
+10:19:17     random: 7
+10:19:17     CutAndSplicePairing: 5
+10:19:17     RippleMutation: 3
+10:19:17   save init7.traj
+10:20:57   VASP finish
+10:21:08   VASP finish
+10:22:03   VASP finish
+10:22:48   VASP finish
+10:23:55   VASP finish
+10:24:35   VASP finish
+10:25:47   VASP finish
+10:26:37   VASP finish
+10:28:12   VASP finish
+10:28:41   VASP finish
+10:29:35   VASP finish
+10:29:44   VASP finish
+10:30:29   VASP finish
+10:30:57   VASP finish
+10:31:10   VASP finish
+10:31:25   VASP finish
+10:33:20   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+10:33:40   Error 'list index out of range' happened on line 108
+10:33:40   VASP fail
+10:34:05   VASP finish
+10:34:46   VASP finish
+10:35:18   VASP finish
+10:35:37   VASP finish
+10:35:58   VASP finish
+10:36:18   VASP finish
+10:36:48   VASP finish
+10:37:33   VASP finish
+10:38:43   VASP finish
+10:39:08   VASP finish
+10:42:20   VASP finish
+10:42:49   VASP finish
+10:44:02   VASP finish
+10:44:25   VASP finish
+10:45:23   VASP finish
+10:45:40   VASP finish
+10:45:55   VASP finish
+10:46:13   VASP finish
+10:48:51   VASP finish
+10:49:22   VASP finish
+10:51:16   VASP finish
+10:56:18   VASP finish
+10:58:40   VASP finish
+11:02:49   VASP finish
+11:06:55   VASP finish
+11:12:08   VASP finish
+11:15:44   VASP finish
+11:19:29   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+11:21:59   Error 'list index out of range' happened on line 108
+11:21:59   VASP fail
+11:25:39   VASP finish
+11:29:17   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+11:29:47   Error 'The file "vasprun.xml" is incomplete, and no DFT data was available. This is likely due to an incomplete calculation.' happened on line 101
+11:29:47   VASP fail
+11:31:52   VASP finish
+11:35:21   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+11:37:50   Error 'list index out of range' happened on line 108
+11:37:50   VASP fail
+11:38:42   VASP finish
+11:39:42   VASP finish
+11:41:33   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+11:44:35   Error 'list index out of range' happened on line 108
+11:44:35   VASP fail
+11:45:19   VASP finish
+11:46:29   VASP finish
+11:48:33   VASP finish
+11:49:53   VASP finish
+11:51:10   VASP finish
+11:52:26   VASP finish
+11:53:39   VASP finish
+11:57:11   VASP finish
+11:58:45   VASP finish
+12:00:35   VASP finish
+12:02:10   VASP finish
+12:03:49   VASP finish
+12:04:21   VASP finish
+12:05:18   VASP finish
+12:06:11   VASP finish
+12:06:37   VASP finish
+12:06:37   construct Population temp with 15 individual
+12:06:37   save raw7.traj
+12:06:37   check population temp, popsize:15
+12:06:37   check survival: 15
+12:06:37   find spg...
+12:06:37   delete duplicate structures...
+12:06:37   calculating dominators...
+12:06:37   calculating fitness...
+12:06:37   del_duplicate temp begin, popsize:15
+12:06:37   del_duplicate survival: 12
+12:06:37   save gen7.traj
+12:06:37   set good population..
+12:06:37   construct goodPop
+12:06:37   construct Population temp with 12 individual
+12:06:37   construct Population temp with 32 individual
+12:06:37   calculating dominators...
+12:06:37   calculating fitness...
+12:06:37   del_duplicate temp begin, popsize:35
+12:06:37   del_duplicate survival: 28
+12:06:37   calculating dominators...
+12:06:37   calculating fitness...
+12:06:37   calculating dominators...
+12:06:37   calculating fitness...
+12:06:37   good ind:
+12:06:37   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+12:06:37   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+12:06:37   Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+12:06:37   Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+12:06:37   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+12:06:37   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+12:06:37   Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 6
+12:06:37   Bi2O6W enthalpy: -7.460073798888889, fit: {'enthalpy': 7.460073798888889}, dominators: 7
+12:06:37   Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+12:06:37   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+12:06:37   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 10
+12:06:37   Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 11
+12:06:37   Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 12
+12:06:37   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 13
+12:06:37   Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 14
+12:06:37   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 15
+12:06:37   Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 16
+12:06:37   Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 17
+12:06:37   Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 18
+12:06:37   Bi2O6W enthalpy: -7.383818015555556, fit: {'enthalpy': 7.383818015555556}, dominators: 19
+12:06:37   save good.traj
+12:06:37   save good7.traj
+12:06:37   set keep population..
+12:06:37   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+12:06:37   construct Population keep with 3 individual
+12:06:37   keep ind:
+12:06:37   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+12:06:37   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+12:06:37   Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+12:06:37   save keep7.traj
+12:06:37   best ind:
+12:06:37   calculating dominators...
+12:06:37   calculating fitness...
+12:06:37   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+12:06:37   save best.traj
+12:06:37   ============= Generation 8 =============
+12:06:37   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 12
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+12:06:37   change volRatio from 3.0791766103400544 to 2.986516174669715
+12:06:37   construct Population temp with 12 individual
+12:06:37   calculating dominators...
+12:06:37   calculating fitness...
+12:06:37   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+12:06:38   construct Population init with 0 individual
+12:06:38   success RippleMutation in init5-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+12:06:38   success CutAndSplicePairing between init7-9 and init5-9
+12:06:38   success RattleMutation in init5-9
+12:06:38   success PermMutation in init7-5
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+12:06:38   success CutAndSplicePairing between init5-9 and init7-0
+12:06:38   success SlipMutation in init5-9
+12:06:38   success RattleMutation in init5-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+12:06:38   success CutAndSplicePairing between init7-15 and init7-2
+12:06:38   success RippleMutation in init7-2
+12:06:38   success PermMutation in init5-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+12:06:38   success CutAndSplicePairing between init5-9 and init7-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+12:06:38   success CutAndSplicePairing between init7-5 and init7-3
+12:06:38   success LatticeMutation in init7-3
+12:06:38   success SlipMutation in init5-9
+12:06:38   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       5       |     5      |
+|     SlipMutation    |    16.67%    |       2       |     2      |
+|   LatticeMutation   |    16.67%    |       1       |     1      |
+|    RippleMutation   |    16.67%    |       2       |     2      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+12:06:38   check population init, popsize:14
+12:06:38   Fail in check_cell, origin = RippleMutation
+12:06:38   Fail in check_cell, origin = RattleMutation
+12:06:38   Fail in check_cell, origin = SlipMutation
+12:06:38   Fail in check_cell, origin = RattleMutation
+12:06:38   Fail in check_cell, origin = PermMutation
+12:06:38   Fail in check_cell, origin = SlipMutation
+12:06:38   check survival: 8
+12:06:38   Reading Seeds ...
+12:06:38   construct Population seed with 0 individual
+12:06:38   check population init, popsize:20
+12:06:38   check survival: 20
+12:06:38   Generate new initial population with 20 individuals:
+12:06:38     PermMutation: 1
+12:06:38     LatticeMutation: 1
+12:06:38     random: 12
+12:06:38     CutAndSplicePairing: 5
+12:06:38     RippleMutation: 1
+12:06:38   save init8.traj
+12:10:37   VASP finish
+12:11:18   VASP finish
+12:14:59   VASP finish
+12:15:18   VASP finish
+12:15:46   VASP finish
+12:19:09   VASP finish
+12:19:43   VASP finish
+12:19:53   VASP finish
+12:20:22   VASP finish
+12:21:02   VASP finish
+12:21:29   VASP finish
+12:22:08   VASP finish
+12:22:35   VASP finish
+12:22:54   VASP finish
+12:23:53   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+12:24:10   Error 'list index out of range' happened on line 108
+12:24:10   VASP fail
+12:24:43   VASP finish
+12:25:05   VASP finish
+12:25:51   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+12:26:04   Error 'list index out of range' happened on line 108
+12:26:04   VASP fail
+12:26:32   VASP finish
+12:26:47   VASP finish
+12:27:15   VASP finish
+12:28:06   VASP finish
+12:28:20   VASP finish
+12:29:07   VASP finish
+12:30:38   VASP finish
+12:30:48   VASP finish
+12:31:10   VASP finish
+12:31:22   VASP finish
+12:32:30   VASP finish
+12:33:02   VASP finish
+12:33:21   VASP finish
+12:33:49   VASP finish
+12:35:00   VASP finish
+12:35:22   VASP finish
+12:36:33   VASP finish
+12:36:55   VASP finish
+12:41:53   VASP finish
+12:47:23   VASP finish
+12:52:19   VASP finish
+12:57:56   VASP finish
+13:00:44   VASP finish
+13:06:42   VASP finish
+13:11:14   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+13:13:47   Error 'list index out of range' happened on line 108
+13:13:47   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+13:16:11   Error 'list index out of range' happened on line 108
+13:16:11   VASP fail
+13:19:36   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+13:20:43   Error 'list index out of range' happened on line 108
+13:20:43   VASP fail
+13:21:40   VASP finish
+13:29:27   VASP finish
+13:31:29   VASP finish
+13:32:40   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+13:35:42   Error 'list index out of range' happened on line 108
+13:35:42   VASP fail
+13:38:42   VASP finish
+13:40:05   VASP finish
+13:41:47   VASP finish
+13:44:35   VASP finish
+13:46:25   VASP finish
+13:47:56   VASP finish
+13:49:32   VASP finish
+13:51:47   VASP finish
+13:53:20   VASP finish
+13:53:46   VASP finish
+13:54:14   VASP finish
+13:54:37   VASP finish
+13:55:05   VASP finish
+13:55:27   VASP finish
+13:56:54   VASP finish
+13:57:36   VASP finish
+13:57:36   construct Population temp with 14 individual
+13:57:36   save raw8.traj
+13:57:36   check population temp, popsize:14
+13:57:36   check survival: 14
+13:57:36   find spg...
+13:57:36   delete duplicate structures...
+13:57:36   calculating dominators...
+13:57:36   calculating fitness...
+13:57:36   del_duplicate temp begin, popsize:14
+13:57:37   del_duplicate survival: 14
+13:57:37   save gen8.traj
+13:57:37   set good population..
+13:57:37   construct goodPop
+13:57:37   construct Population temp with 14 individual
+13:57:37   construct Population temp with 34 individual
+13:57:37   calculating dominators...
+13:57:37   calculating fitness...
+13:57:37   del_duplicate temp begin, popsize:37
+13:57:37   del_duplicate survival: 29
+13:57:37   calculating dominators...
+13:57:37   calculating fitness...
+13:57:37   calculating dominators...
+13:57:37   calculating fitness...
+13:57:37   good ind:
+13:57:37   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+13:57:37   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+13:57:37   Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+13:57:37   Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+13:57:37   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+13:57:37   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+13:57:37   Bi2O6W enthalpy: -7.4680113355555555, fit: {'enthalpy': 7.4680113355555555}, dominators: 6
+13:57:37   Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 7
+13:57:37   Bi2O6W enthalpy: -7.458662253333333, fit: {'enthalpy': 7.458662253333333}, dominators: 8
+13:57:37   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+13:57:37   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 10
+13:57:37   Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 11
+13:57:37   Bi2O6W enthalpy: -7.434759473333333, fit: {'enthalpy': 7.434759473333333}, dominators: 12
+13:57:37   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 13
+13:57:37   Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 14
+13:57:37   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 15
+13:57:37   Bi2O6W enthalpy: -7.4062528711111115, fit: {'enthalpy': 7.4062528711111115}, dominators: 16
+13:57:37   Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 17
+13:57:37   Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 18
+13:57:37   Bi2O6W enthalpy: -7.385993243333333, fit: {'enthalpy': 7.385993243333333}, dominators: 19
+13:57:37   save good.traj
+13:57:37   save good8.traj
+13:57:37   set keep population..
+13:57:37   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+13:57:37   construct Population keep with 3 individual
+13:57:37   keep ind:
+13:57:37   Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+13:57:37   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+13:57:37   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+13:57:37   save keep8.traj
+13:57:37   best ind:
+13:57:37   calculating dominators...
+13:57:37   calculating fitness...
+13:57:37   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+13:57:37   save best.traj
+13:57:37   ============= Generation 9 =============
+13:57:37   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 14
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+13:57:37   change volRatio from 2.986516174669715 to 2.9719253604605496
+13:57:37   construct Population temp with 14 individual
+13:57:37   calculating dominators...
+13:57:37   calculating fitness...
+13:57:37   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+13:57:37   construct Population init with 0 individual
+13:57:37   success PermMutation in init8-12
+13:57:37   success RippleMutation in init5-9
+13:57:37   success PermMutation in init5-9
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+13:57:37   success CutAndSplicePairing between init8-8 and init7-5
+13:57:37   success SlipMutation in init5-9
+13:57:37   success SlipMutation in init5-9
+13:57:37   success LatticeMutation in init7-2
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+13:57:37   success CutAndSplicePairing between init5-9 and init8-1
+13:57:37   success RattleMutation in init8-11
+13:57:37   success RattleMutation in init8-13
+13:57:37   success SlipMutation in init7-2
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+13:57:37   success CutAndSplicePairing between init5-9 and init8-1
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+13:57:37   success CutAndSplicePairing between init8-11 and init8-14
+13:57:37   success PermMutation in init7-2
+13:57:37   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       4       |     4      |
+|     SlipMutation    |    16.67%    |       3       |     3      |
+|   LatticeMutation   |    16.67%    |       1       |     1      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       2       |     2      |
+|     PermMutation    |    16.67%    |       3       |     3      |
++---------------------+--------------+---------------+------------+
+13:57:37   check population init, popsize:14
+13:57:37   Fail in check_cell, origin = RippleMutation
+13:57:37   Fail in check_cell, origin = PermMutation
+13:57:37   Fail in check_cell, origin = SlipMutation
+13:57:37   Fail in check_cell, origin = SlipMutation
+13:57:37   check survival: 10
+13:57:37   Reading Seeds ...
+13:57:37   construct Population seed with 0 individual
+13:57:37   check population init, popsize:20
+13:57:38   check survival: 20
+13:57:38   Generate new initial population with 20 individuals:
+13:57:38     PermMutation: 2
+13:57:38     RattleMutation: 2
+13:57:38     LatticeMutation: 1
+13:57:38     SlipMutation: 1
+13:57:38     random: 10
+13:57:38     CutAndSplicePairing: 4
+13:57:38   save init9.traj
+13:57:48   VASP finish
+13:58:52   VASP finish
+13:59:19   VASP finish
+14:02:21   VASP finish
+14:02:40   VASP finish
+14:03:29   VASP finish
+14:04:05   VASP finish
+14:07:50   VASP finish
+14:08:53   VASP finish
+14:09:28   VASP finish
+14:09:59   VASP finish
+14:10:25   VASP finish
+14:10:58   VASP finish
+14:12:41   VASP finish
+14:13:10   VASP finish
+14:15:22   VASP finish
+14:15:31   VASP finish
+14:16:03   VASP finish
+14:16:37   VASP finish
+14:16:48   VASP finish
+14:19:17   VASP finish
+14:19:38   VASP finish
+14:20:04   VASP finish
+14:20:36   VASP finish
+14:20:44   VASP finish
+14:21:36   VASP finish
+14:22:17   VASP finish
+14:22:44   VASP finish
+14:24:29   VASP finish
+14:26:14   VASP finish
+14:26:26   VASP finish
+14:27:04   VASP finish
+14:27:38   VASP finish
+14:28:11   VASP finish
+14:28:29   VASP finish
+14:30:07   VASP finish
+14:31:05   VASP finish
+14:31:26   VASP finish
+14:32:24   VASP finish
+14:32:59   VASP finish
+14:36:11   VASP finish
+14:40:42   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+14:42:07   Error 'list index out of range' happened on line 108
+14:42:07   VASP fail
+14:46:57   VASP finish
+14:49:31   VASP finish
+14:54:31   VASP finish
+14:57:44   VASP finish
+15:03:21   VASP finish
+15:08:08   VASP finish
+15:11:54   VASP finish
+15:15:21   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+15:16:18   Error 'list index out of range' happened on line 108
+15:16:18   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+15:20:30   Error 'list index out of range' happened on line 108
+15:20:30   VASP fail
+15:24:52   VASP finish
+15:29:50   VASP finish
+15:34:02   VASP finish
+15:35:06   VASP finish
+15:36:41   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+15:38:58   Error 'list index out of range' happened on line 108
+15:38:58   VASP fail
+15:41:15   VASP finish
+15:42:49   VASP finish
+15:43:41   VASP finish
+15:45:57   VASP finish
+15:47:13   VASP finish
+15:48:36   VASP finish
+15:50:17   VASP finish
+15:52:33   VASP finish
+15:54:32   VASP finish
+15:57:45   VASP finish
+15:58:12   VASP finish
+15:59:41   VASP finish
+16:00:15   VASP finish
+16:02:31   VASP finish
+16:02:53   VASP finish
+16:03:47   VASP finish
+16:04:18   VASP finish
+16:04:18   construct Population temp with 16 individual
+16:04:18   save raw9.traj
+16:04:18   check population temp, popsize:16
+16:04:18   check survival: 16
+16:04:18   find spg...
+16:04:18   delete duplicate structures...
+16:04:18   calculating dominators...
+16:04:18   calculating fitness...
+16:04:18   del_duplicate temp begin, popsize:16
+16:04:18   del_duplicate survival: 16
+16:04:18   save gen9.traj
+16:04:18   set good population..
+16:04:18   construct goodPop
+16:04:18   construct Population temp with 16 individual
+16:04:18   construct Population temp with 36 individual
+16:04:18   calculating dominators...
+16:04:18   calculating fitness...
+16:04:18   del_duplicate temp begin, popsize:39
+16:04:18   del_duplicate survival: 31
+16:04:18   calculating dominators...
+16:04:18   calculating fitness...
+16:04:18   calculating dominators...
+16:04:18   calculating fitness...
+16:04:18   good ind:
+16:04:18   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+16:04:18   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+16:04:18   Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+16:04:18   Bi2O6W enthalpy: -7.522577743333334, fit: {'enthalpy': 7.522577743333334}, dominators: 3
+16:04:18   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+16:04:18   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+16:04:18   Bi2O6W enthalpy: -7.4680113355555555, fit: {'enthalpy': 7.4680113355555555}, dominators: 6
+16:04:18   Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 7
+16:04:18   Bi2O6W enthalpy: -7.460469574444444, fit: {'enthalpy': 7.460469574444444}, dominators: 8
+16:04:18   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+16:04:18   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 10
+16:04:18   Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 11
+16:04:18   Bi2O6W enthalpy: -7.435868005555556, fit: {'enthalpy': 7.435868005555556}, dominators: 12
+16:04:18   Bi2O6W enthalpy: -7.434026753333334, fit: {'enthalpy': 7.434026753333334}, dominators: 13
+16:04:18   Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 14
+16:04:18   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 15
+16:04:18   Bi2O6W enthalpy: -7.408148727777777, fit: {'enthalpy': 7.408148727777777}, dominators: 16
+16:04:18   Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 17
+16:04:18   Bi2O6W enthalpy: -7.392872926666666, fit: {'enthalpy': 7.392872926666666}, dominators: 18
+16:04:18   Bi2O6W enthalpy: -7.387590348888889, fit: {'enthalpy': 7.387590348888889}, dominators: 19
+16:04:18   save good.traj
+16:04:18   save good9.traj
+16:04:18   set keep population..
+16:04:18   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+16:04:18   construct Population keep with 3 individual
+16:04:18   keep ind:
+16:04:18   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 9
+16:04:18   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+16:04:18   Bi2O6W enthalpy: -7.523579682222223, fit: {'enthalpy': 7.523579682222223}, dominators: 2
+16:04:18   save keep9.traj
+16:04:18   best ind:
+16:04:18   calculating dominators...
+16:04:18   calculating fitness...
+16:04:18   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+16:04:18   save best.traj
+16:04:18   ============ Generation 10 =============
+16:04:18   FixPopulation
+-------------------
+Ind Type           : Bulk
+Ind Numbers        : 16
+Population Size    : 20
+Distance Dict      : {('Bi', 'Bi'): 1.776, ('Bi', 'W'): 1.8599999999999999, ('W', 'Bi'): 1.8599999999999999, ('Bi', 'O'): 1.284, ('O', 'Bi'): 1.284, ('W', 'W'): 1.944, ('W', 'O'): 1.368, ('O', 'W'): 1.368, ('O', 'O'): 0.792}
+-------------------
+16:04:18   change volRatio from 2.9719253604605496 to 2.9122249024443994
+16:04:18   construct Population temp with 16 individual
+16:04:18   calculating dominators...
+16:04:18   calculating fitness...
+16:04:18   GAGenerator
+-------------------
+Mutations:
+ SlipMutation        : 16.67%
+ LatticeMutation     : 16.67%
+ RippleMutation      : 16.67%
+ RattleMutation      : 16.67%
+ PermMutation        : 16.67%
+Crossovers:
+ CutAndSplicePairing : 16.67%
+Random Ratio         : 30.00%
+Number of cluster    : 3
+Add symmertry        : True
+-------------------
+
+16:04:18   construct Population init with 0 individual
+16:04:18   success RattleMutation in init9-13
+16:04:18   success RippleMutation in init9-10
+16:04:18   success LatticeMutation in init5-9
+16:04:18   success LatticeMutation in init7-2
+16:04:18   success RattleMutation in init7-2
+16:04:18   success RattleMutation in init9-13
+16:04:18   success LatticeMutation in init9-13
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+16:04:18   success CutAndSplicePairing between init9-9 and init9-8
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+16:04:19   success CutAndSplicePairing between init7-2 and init7-5
+16:04:19   success PermMutation in init9-0
+16:04:19   success PermMutation in init7-2
+16:04:19   success RattleMutation in init9-15
+16:04:19   success LatticeMutation in init9-10
+16:04:19   success LatticeMutation in init9-10
+16:04:19   OP infomation: 
++---------------------+--------------+---------------+------------+
+|       Operator      | Probability  | SelectedTimes | SuccessNum |
++---------------------+--------------+---------------+------------+
+| CutAndSplicePairing |    16.67%    |       2       |     2      |
+|     SlipMutation    |    16.67%    |       0       |     0      |
+|   LatticeMutation   |    16.67%    |       5       |     5      |
+|    RippleMutation   |    16.67%    |       1       |     1      |
+|    RattleMutation   |    16.67%    |       4       |     4      |
+|     PermMutation    |    16.67%    |       2       |     2      |
++---------------------+--------------+---------------+------------+
+16:04:19   check population init, popsize:14
+16:04:19   Fail in check_cell, origin = LatticeMutation
+16:04:19   check survival: 13
+16:04:19   Reading Seeds ...
+16:04:19   construct Population seed with 0 individual
+16:04:19   check population init, popsize:20
+16:04:19   check survival: 20
+16:04:19   Generate new initial population with 20 individuals:
+16:04:19     PermMutation: 2
+16:04:19     RattleMutation: 4
+16:04:19     LatticeMutation: 4
+16:04:19     random: 7
+16:04:19     CutAndSplicePairing: 2
+16:04:19     RippleMutation: 1
+16:04:19   save init10.traj
+16:04:59   VASP finish
+16:05:57   VASP finish
+16:06:21   VASP finish
+16:06:42   VASP finish
+16:07:15   VASP finish
+16:07:32   VASP finish
+16:08:08   VASP finish
+16:09:19   VASP finish
+16:10:18   VASP finish
+16:10:40   VASP finish
+16:11:16   VASP finish
+16:11:28   VASP finish
+16:11:42   VASP finish
+16:12:32   VASP finish
+16:13:33   VASP finish
+16:15:16   VASP finish
+16:15:27   VASP finish
+16:16:05   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+16:16:23   Error 'list index out of range' happened on line 108
+16:16:23   VASP fail
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+16:16:49   Error 'list index out of range' happened on line 108
+16:16:49   VASP fail
+16:17:41   VASP finish
+16:17:58   VASP finish
+16:18:57   VASP finish
+16:19:19   VASP finish
+16:19:47   VASP finish
+16:19:59   VASP finish
+16:20:50   VASP finish
+16:22:05   VASP finish
+16:22:42   VASP finish
+16:25:27   VASP finish
+16:25:34   VASP finish
+16:26:04   VASP finish
+16:26:25   VASP finish
+16:27:13   VASP finish
+16:28:52   VASP finish
+16:29:00   VASP finish
+16:29:19   VASP finish
+16:30:26   VASP finish
+16:34:48   VASP finish
+16:40:31   VASP finish
+16:44:52   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+16:45:37   Error 'list index out of range' happened on line 108
+16:45:37   VASP fail
+16:49:03   VASP finish
+16:53:21   VASP finish
+16:58:14   VASP finish
+17:03:01   VASP finish
+17:07:42   VASP finish
+17:11:14   VASP finish
+17:15:37   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+17:16:13   Error 'list index out of range' happened on line 108
+17:16:13   VASP fail
+17:18:49   VASP finish
+17:20:49   VASP finish
+17:32:54   VASP finish
+17:36:58   VASP finish
+17:38:01   VASP finish
+17:42:51   VASP finish
+17:44:25   VASP finish
+17:46:12   VASP finish
+17:47:41   VASP finish
+17:49:40   VASP finish
+17:51:58   VASP finish
+17:53:25   VASP finish
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+1
+17:54:30   Error 'The file "vasprun.xml" is incomplete, and no DFT data was available. This is likely due to an incomplete calculation.' happened on line 101
+17:54:30   VASP fail
+17:56:25   VASP finish
+17:58:09   VASP finish
+17:59:22   VASP finish
+18:00:46   VASP finish
+18:01:16   VASP finish
+18:04:54   VASP finish
+18:05:16   VASP finish
+18:05:39   VASP finish
+18:06:10   VASP finish
+18:06:10   construct Population temp with 15 individual
+18:06:10   save raw10.traj
+18:06:10   check population temp, popsize:15
+18:06:10   check survival: 15
+18:06:10   find spg...
+18:06:10   delete duplicate structures...
+18:06:10   calculating dominators...
+18:06:10   calculating fitness...
+18:06:10   del_duplicate temp begin, popsize:15
+18:06:10   del_duplicate survival: 13
+18:06:10   save gen10.traj
+18:06:10   set good population..
+18:06:10   construct goodPop
+18:06:10   construct Population temp with 13 individual
+18:06:10   construct Population temp with 33 individual
+18:06:10   calculating dominators...
+18:06:10   calculating fitness...
+18:06:10   del_duplicate temp begin, popsize:36
+18:06:10   del_duplicate survival: 30
+18:06:10   calculating dominators...
+18:06:10   calculating fitness...
+18:06:10   calculating dominators...
+18:06:10   calculating fitness...
+18:06:10   good ind:
+18:06:10   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+18:06:10   Bi2O6W enthalpy: -7.5272841122222225, fit: {'enthalpy': 7.5272841122222225}, dominators: 1
+18:06:10   Bi2O6W enthalpy: -7.523612047777778, fit: {'enthalpy': 7.523612047777778}, dominators: 2
+18:06:10   Bi2O6W enthalpy: -7.523137051111111, fit: {'enthalpy': 7.523137051111111}, dominators: 3
+18:06:10   Bi2O6W enthalpy: -7.48783853, fit: {'enthalpy': 7.48783853}, dominators: 4
+18:06:10   Bi2O6W enthalpy: -7.4763447111111105, fit: {'enthalpy': 7.4763447111111105}, dominators: 5
+18:06:10   Bi2O6W enthalpy: -7.4680113355555555, fit: {'enthalpy': 7.4680113355555555}, dominators: 6
+18:06:10   Bi2O6W enthalpy: -7.463368226666666, fit: {'enthalpy': 7.463368226666666}, dominators: 7
+18:06:10   Bi2O6W enthalpy: -7.462668281111111, fit: {'enthalpy': 7.462668281111111}, dominators: 8
+18:06:10   Bi2O6W enthalpy: -7.460469574444444, fit: {'enthalpy': 7.460469574444444}, dominators: 9
+18:06:10   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 10
+18:06:10   Bi2O6W enthalpy: -7.44606525, fit: {'enthalpy': 7.44606525}, dominators: 11
+18:06:10   Bi2O6W enthalpy: -7.437527645555556, fit: {'enthalpy': 7.437527645555556}, dominators: 12
+18:06:10   Bi2O6W enthalpy: -7.435868005555556, fit: {'enthalpy': 7.435868005555556}, dominators: 13
+18:06:10   Bi2O6W enthalpy: -7.4348285177777775, fit: {'enthalpy': 7.4348285177777775}, dominators: 14
+18:06:10   Bi2O6W enthalpy: -7.42023027888889, fit: {'enthalpy': 7.42023027888889}, dominators: 15
+18:06:10   Bi2O6W enthalpy: -7.413523598888888, fit: {'enthalpy': 7.413523598888888}, dominators: 16
+18:06:10   Bi2O6W enthalpy: -7.408148727777777, fit: {'enthalpy': 7.408148727777777}, dominators: 17
+18:06:10   Bi2O6W enthalpy: -7.398624378888889, fit: {'enthalpy': 7.398624378888889}, dominators: 18
+18:06:10   Bi2O6W enthalpy: -7.392872926666666, fit: {'enthalpy': 7.392872926666666}, dominators: 19
+18:06:10   save good.traj
+18:06:10   save good10.traj
+18:06:10   set keep population..
+18:06:10   construct keepPop
+/opt/software/magus/lib/python3.11/site-packages/sklearn/cluster/_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+18:06:10   construct Population keep with 3 individual
+18:06:10   keep ind:
+18:06:10   Bi2O6W enthalpy: -7.450441, fit: {'enthalpy': 7.450441}, dominators: 10
+18:06:10   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}, dominators: 0
+18:06:10   Bi2O6W enthalpy: -7.523612047777778, fit: {'enthalpy': 7.523612047777778}, dominators: 2
+18:06:10   save keep10.traj
+18:06:10   best ind:
+18:06:10   calculating dominators...
+18:06:10   calculating fitness...
+18:06:10   Bi2O6W enthalpy: -7.545141207777778, fit: {'enthalpy': 7.545141207777778}
+18:06:10   save best.traj
